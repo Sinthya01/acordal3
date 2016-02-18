@@ -1,0 +1,47 @@
+<ItemIdInfo>
+	
+		<!-- Agency/Broker/MGA ID -->
+		<AgencyId/> 
+		<!-- Insurer/UnderwritingCo ID -->
+		<InsurerId/>
+		<!-- Auto generated GUID -->		
+		<SystemId/> 
+		
+		<!-- other unique ids can be stored here -->
+		<OtherIdentifier> 
+			<OtherIdTypeCd CodeListRef=""/>
+			<OtherId/>
+		</OtherIdentifier>
+		
+		<!-- used for requestor info and audit trail. -->
+		<AuditInfo> 
+			<SequenceNumber />
+			<UpdatedByUser /> 
+			<UpdatedBySystem /> 
+			<UpdatedDtTime /> 
+		</AuditInfo>
+		
+		<!-- period for which the resource should remain active -->
+		<ActivationTerm>
+			<EffectiveDtTime /> 
+			<ExpirationDtTime /> 
+		</ActivationTerm>
+		
+		<!-- may have to move this above ItemIdInfo to be first aggregate in parent based on HAL principles -->
+		<Links> 
+            <Self>http://rest/insureds/50123</Self >
+            <Vehicle>http://rest/insureds/vehicles/156948</Vehicle >
+            <Address>http://rest/insureds/addresses/70123</Address >
+            <Policy>http://rest/insureds/policies/12898</Policy>
+            <Policy>http://rest/insureds/policies/12898</Policy>
+            <Account>http://rest/insureds/accounts/1496</Account>			
+			<!-- can also be used for search results -->
+            <Last>http://rest/insureds/50122</Last>
+            <Next>http://rest/insureds/50124</Next>				
+        </Links>
+		
+		<!-- need something to indicate available actions -->	
+		<Actions>
+			<ActionCd CodeListRef="" />		
+		</Actions>
+	</ItemIdInfo>
