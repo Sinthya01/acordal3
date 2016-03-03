@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.ACORD.org/standards/PC/ACORD2/xml/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.ACORD.org/standards/PC/ACORD2/xml/" elementFormDefault="unqualified" attributeFormDefault="unqualified" version="2.0-Draft">
+	<xsd:annotation>
+		<xsd:appinfo>
+			<version>2.0-Draft</version>
+			<status>Draft</status>
+			<genDate>Thu Mar 03 12:28:22 2016</genDate>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml-ns.xsd"/>
+	<xsd:simpleType name="AssignedIdentifier_NoID">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="36"/>
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Boolean_NoID">
+		<xsd:restriction base="xsd:boolean">
+			<xsd:pattern value="\d"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="C-10_NoID">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="10"/>
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="C-100_NoID">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="100"/>
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="C-11_NoID">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="11"/>
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="C-12_NoID">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="12"/>
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="C-13_NoID">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="13"/>
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="C-15_NoID">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="15"/>
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="C-2_NoID">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="2"/>
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="C-20_NoID">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="20"/>
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="C-2048_NoID">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="2048"/>
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="C-25_NoID">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="25"/>
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="C-255_NoID">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="255"/>
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="C-30_NoID">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="30"/>
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="C-32_NoID">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="32"/>
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="C-36_NoID">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="36"/>
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="C-4_NoID">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="4"/>
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="C-40_NoID">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="40"/>
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="C-5_NoID">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="5"/>
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="C-50_NoID">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="50"/>
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="C-6_NoID">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="6"/>
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="C-60_NoID">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="60"/>
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="C-64_NoID">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="64"/>
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="C-8_NoID">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="8"/>
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="C-80_NoID">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="80"/>
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="C-Infinite_NoID">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Date_NoID">
+		<xsd:union memberTypes="xsd:date xsd:gYear xsd:gYearMonth"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="DateTime_NoID">
+		<xsd:union memberTypes="xsd:dateTime xsd:string"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="Decimal_NoID">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:totalDigits value="15"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Enumeration_Type">
+		<xsd:restriction base="xsd:token">
+			<xsd:maxLength value="80"/>
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="ID">
+		<xsd:restriction base="xsd:ID"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="IDREF">
+		<xsd:restriction base="xsd:IDREF"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="IDREFS">
+		<xsd:restriction base="xsd:IDREFS"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="Long_NoID">
+		<xsd:restriction base="xsd:int"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="NC_NoID">
+		<xsd:restriction base="xsd:token">
+			<xsd:minLength value="1"/>
+			<xsd:pattern value="[\p{IsBasicLatin}]*"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="NC-11_NoID">
+		<xsd:restriction base="NC_NoID">
+			<xsd:maxLength value="11"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="NC-12_NoID">
+		<xsd:restriction base="NC_NoID">
+			<xsd:maxLength value="12"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="NC-128_NoID">
+		<xsd:restriction base="NC_NoID">
+			<xsd:maxLength value="128"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="NC-64_NoID">
+		<xsd:restriction base="NC_NoID">
+			<xsd:maxLength value="64"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="PercentDecimal_NoID">
+		<xsd:restriction base="xsd:decimal"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="PercentLong_NoID">
+		<xsd:restriction base="xsd:int"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="PhoneNumberType_NoID">
+		<xsd:restriction base="NC_NoID">
+			<xsd:maxLength value="32"/>
+			<xsd:pattern value="\+\S+\-\S+\-\S+(\+\S+)?"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="RawBinaryData_NoID">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="Time_NoID">
+		<xsd:restriction base="xsd:time"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="Token">
+		<xsd:restriction base="xsd:token"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="URLType_NoID">
+		<xsd:restriction base="xsd:anyURI">
+			<xsd:maxLength value="1024"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="UUID_NoID">
+		<xsd:restriction base="NC_NoID">
+			<xsd:maxLength value="36"/>
+			<xsd:minLength value="36"/>
+			<xsd:pattern value="[0-9A-Fa-f]{8}(-[0-9A-Fa-f]{4}){3}-[0-9A-Fa-f]{12}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Year_NoID">
+		<xsd:restriction base="xsd:gYear"/>
+	</xsd:simpleType>
+	<xsd:complexType name="AssignedIdentifier">
+		<xsd:simpleContent>
+			<xsd:extension base="AssignedIdentifier_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="Boolean">
+		<xsd:simpleContent>
+			<xsd:extension base="Boolean_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="C-10">
+		<xsd:simpleContent>
+			<xsd:extension base="C-10_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="C-100">
+		<xsd:simpleContent>
+			<xsd:extension base="C-100_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="C-11">
+		<xsd:simpleContent>
+			<xsd:extension base="C-11_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="C-12">
+		<xsd:simpleContent>
+			<xsd:extension base="C-12_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="C-13">
+		<xsd:simpleContent>
+			<xsd:extension base="C-13_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="C-15">
+		<xsd:simpleContent>
+			<xsd:extension base="C-15_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="C-2">
+		<xsd:simpleContent>
+			<xsd:extension base="C-2_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="C-20">
+		<xsd:simpleContent>
+			<xsd:extension base="C-20_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="C-2048">
+		<xsd:simpleContent>
+			<xsd:extension base="C-2048_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="C-25">
+		<xsd:simpleContent>
+			<xsd:extension base="C-25_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="C-255">
+		<xsd:simpleContent>
+			<xsd:extension base="C-255_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="C-30">
+		<xsd:simpleContent>
+			<xsd:extension base="C-30_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="C-32">
+		<xsd:simpleContent>
+			<xsd:extension base="C-32_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="C-36">
+		<xsd:simpleContent>
+			<xsd:extension base="C-36_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="C-4">
+		<xsd:simpleContent>
+			<xsd:extension base="C-4_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="C-40">
+		<xsd:simpleContent>
+			<xsd:extension base="C-40_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="C-5">
+		<xsd:simpleContent>
+			<xsd:extension base="C-5_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="C-50">
+		<xsd:simpleContent>
+			<xsd:extension base="C-50_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="C-6">
+		<xsd:simpleContent>
+			<xsd:extension base="C-6_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="C-60">
+		<xsd:simpleContent>
+			<xsd:extension base="C-60_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="C-64">
+		<xsd:simpleContent>
+			<xsd:extension base="C-64_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="C-8">
+		<xsd:simpleContent>
+			<xsd:extension base="C-8_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="C-80">
+		<xsd:simpleContent>
+			<xsd:extension base="C-80_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="C-Infinite">
+		<xsd:simpleContent>
+			<xsd:extension base="C-Infinite_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="Date">
+		<xsd:simpleContent>
+			<xsd:extension base="Date_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="DateTime">
+		<xsd:simpleContent>
+			<xsd:extension base="DateTime_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="Decimal">
+		<xsd:simpleContent>
+			<xsd:extension base="Decimal_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="IndustryCode_Type">
+		<xsd:simpleContent>
+			<xsd:extension base="Enumeration_Type">
+				<xsd:attribute name="id" type="ID"/>
+				<xsd:attribute name="CodeListRef" type="IDREF"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="Long">
+		<xsd:simpleContent>
+			<xsd:extension base="Long_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="NC-128">
+		<xsd:simpleContent>
+			<xsd:extension base="NC-128_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="PercentDecimal">
+		<xsd:simpleContent>
+			<xsd:extension base="PercentDecimal_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="PercentLong">
+		<xsd:simpleContent>
+			<xsd:extension base="PercentLong_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="PhoneNumberType">
+		<xsd:simpleContent>
+			<xsd:extension base="PhoneNumberType_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="RawBinaryData">
+		<xsd:simpleContent>
+			<xsd:extension base="RawBinaryData_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="Time">
+		<xsd:simpleContent>
+			<xsd:extension base="Time_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="URLType">
+		<xsd:simpleContent>
+			<xsd:extension base="URLType_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="UUID">
+		<xsd:simpleContent>
+			<xsd:extension base="UUID_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="Year">
+		<xsd:simpleContent>
+			<xsd:extension base="Year_NoID">
+				<xsd:attribute name="id" type="ID"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+</xsd:schema>
