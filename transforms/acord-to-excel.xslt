@@ -5,48 +5,59 @@
 						 xmlns:x="urn:schemas-microsoft-com:office:excel"
 						 xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
 						 xmlns:html="http://www.w3.org/TR/REC-html40" >
+						 
 	<xsl:output method="xml" version="1.0" media-type="text/xml" encoding="iso-8859-1" indent="yes"/>
 
 	<xsl:template match="/ACORD-XML-DOC">
 		<Workbook>
 			<Worksheet ss:Name="tag">
-				<xsl:call-template name="tag-body" />
+				<xsl:call-template name="tag-table" />
 			</Worksheet>
 			<Worksheet ss:Name="data">
-				<xsl:call-template name="data-body" />
+				<xsl:call-template name="data-table" />
 			</Worksheet>
 			<Worksheet ss:Name="option">
-				<xsl:call-template name="option-body" />
+				<xsl:call-template name="option-table" />
+			</Worksheet>
+			<Worksheet ss:Name="attribute">
+				<xsl:call-template name="attribute-table" />
+			</Worksheet>
+			<Worksheet ss:Name="usage">
+				<xsl:call-template name="usage-table" />
 			</Worksheet>
 		</Workbook>
 	</xsl:template>
 	
-  <xsl:template name="tag-body">  
-		<Table ss:ExpandedColumnCount="4" ss:ExpandedRowCount="{count(Tags/Tag[@type='Element'])+1}" x:FullColumns="1" x:FullRows="1" ss:DefaultRowHeight="15">
+  <xsl:template name="tag-table">  
+		<Table ss:ExpandedColumnCount="6" ss:ExpandedRowCount="{count(Tags/Tag)+1}" x:FullColumns="1" x:FullRows="1" ss:DefaultRowHeight="15">
 				   
 		<!-- header -->	   
 		   <Row>
 			<Cell><Data ss:Type="String">TAG_ID</Data></Cell>
 			<Cell><Data ss:Type="String">TAG_NAME</Data></Cell>
+			<Cell><Data ss:Type="String">TAG_TYPE</Data></Cell>
 			<Cell><Data ss:Type="String">TAG_DESC</Data></Cell>
 			<Cell><Data ss:Type="String">TAG_DATA</Data></Cell>
+			<Cell><Data ss:Type="String">TAG_OLD</Data></Cell>
 		   </Row>
   
 		<!-- body -->
-        <xsl:for-each select="Tags/Tag[@type='Element']">
+        <xsl:for-each select="Tags/Tag">
 		   <Row>
 			<Cell><Data ss:Type="String"><xsl:value-of select="@id" /></Data></Cell>
 			<Cell><Data ss:Type="String"><xsl:value-of select="TagName" /></Data></Cell>
+			<Cell><Data ss:Type="String"><xsl:value-of select="@type" /></Data></Cell>
 			<Cell><Data ss:Type="String"><xsl:value-of select="Desc" /></Data></Cell>
-			<Cell><Data ss:Type="String"><xsl:value-of select="DataTypeName/@datatyperef" /></Data></Cell>
+			<Cell><Data ss:Type="String"><xsl:value-of select="DataTypeName/@datatyperef" /><xsl:value-of select="BaseClassName/@baseclassref" /></Data></Cell>
+			<Cell><Data ss:Type="String"><xsl:value-of select="@deprecated" /></Data></Cell>
 		   </Row>
         </xsl:for-each>       
         
 	  </Table>   
   </xsl:template>
 		
-  <xsl:template name="data-body">
-		<Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="{count(DataTypes/DataType[not(Group) and not(BaseClass)])+1}" x:FullColumns="1" x:FullRows="1" ss:DefaultRowHeight="15">
+  <xsl:template name="data-table">
+		<Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="{count(DataTypes/DataType)+1}" x:FullColumns="1" x:FullRows="1" ss:DefaultRowHeight="15">
 				   
 		<!-- header -->	   
 		   <Row>
@@ -60,7 +71,7 @@
 		   </Row>
   
 		<!-- body -->
-        <xsl:for-each select="DataTypes/DataType[not(Group) and not(BaseClass)]">
+        <xsl:for-each select="DataTypes/DataType">
 		   <Row>
 			<Cell><Data ss:Type="String"><xsl:value-of select="@id" /></Data></Cell>
 			<Cell><Data ss:Type="String"><xsl:value-of select="TypeTitle" /></Data></Cell>
@@ -84,7 +95,7 @@
 	  </Table>   
   </xsl:template>
 	
-  <xsl:template name="option-body">
+  <xsl:template name="option-table">
 		<Table ss:ExpandedColumnCount="4" ss:ExpandedRowCount="{count(DataTypes/DataType/Enumeration/Codes/Code)+1}" x:FullColumns="1" x:FullRows="1" ss:DefaultRowHeight="15">
 				   
 		<!-- header -->	   
@@ -107,5 +118,90 @@
         
 	  </Table>         
   </xsl:template>
+  
+  <xsl:template name="attribute-table">
+		<Table ss:ExpandedColumnCount="4" ss:ExpandedRowCount="{count(AttributesInfo/AttributeInfo)+1}" x:FullColumns="1" x:FullRows="1" ss:DefaultRowHeight="15">
+				   
+		<!-- header -->	   
+		   <Row>
+			<Cell><Data ss:Type="String">ATTRIBUTE_NAME</Data></Cell>
+			<Cell><Data ss:Type="String">ATTRIBUTE_TYPE</Data></Cell>
+			<Cell><Data ss:Type="String">ATTRIBUTE_DESC</Data></Cell>
+			<Cell><Data ss:Type="String">ATTRIBUTE_OLD</Data></Cell>
+		   </Row>
+  
+		<!-- body -->
+        <xsl:for-each select="AttributesInfo/AttributeInfo">
+		   <Row>
+			<Cell><Data ss:Type="String"><xsl:value-of select="@id" /></Data></Cell>
+			<Cell><Data ss:Type="String"><xsl:value-of select="@type" /></Data></Cell>
+			<Cell><Data ss:Type="String"><xsl:value-of select="Desc" /></Data></Cell>
+			<Cell><Data ss:Type="String"><xsl:value-of select="@deprecated" /></Data></Cell>
+		   </Row>
+        </xsl:for-each>       
+        
+	  </Table>         
+  </xsl:template>
+	
+  <xsl:template name="usage-table">
+		<Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="{count(Usages/TagUsage//Content)+count(DataTypes/DataType//Content)+1}" x:FullColumns="1" x:FullRows="1" ss:DefaultRowHeight="15">
+				   
+		<!-- header -->	   
+		   <Row>
+			<Cell><Data ss:Type="String">USAGE_PARENT</Data></Cell>
+			<Cell><Data ss:Type="String">USAGE_TAG</Data></Cell>
+			<Cell><Data ss:Type="String">USAGE_DESC</Data></Cell>
+			<Cell><Data ss:Type="String">USAGE_REQUIRED</Data></Cell>
+			<Cell><Data ss:Type="String">USAGE_REPEATING</Data></Cell>
+			<Cell><Data ss:Type="String">USAGE_LOGIC</Data></Cell>
+			<Cell><Data ss:Type="String">USAGE_OLD</Data></Cell>
+		   </Row>
+  
+		<!-- body -->
+        <xsl:for-each select="Usages/TagUsage//Content">
+		   <Row>
+			<Cell><Data ss:Type="String"><xsl:value-of select="ancestor::TagUsage/@idref" /></Data></Cell>
+			<Cell><Data ss:Type="String"><xsl:value-of select="@idref" /></Data></Cell>
+			<Cell><Data ss:Type="String"><xsl:value-of select="SupplementalDesc" /></Data></Cell>
+			<Cell><Data ss:Type="String"><xsl:value-of select="@required" /></Data></Cell>
+			<Cell><Data ss:Type="String"><xsl:value-of select="@repeating" /></Data></Cell>
+			<Cell><Data ss:Type="String"><xsl:value-of select="@logicflag" /></Data></Cell>
+			<Cell><Data ss:Type="String"><xsl:value-of select="@deprecated" /></Data></Cell>
+		   </Row>
+        </xsl:for-each>     
+  
+		<!-- body -->
+        <xsl:for-each select="DataTypes/DataType//Content">
+		   <Row>
+			<Cell><Data ss:Type="String"><xsl:value-of select="ancestor::DataType/@id" /></Data></Cell>
+			<Cell><Data ss:Type="String"><xsl:value-of select="@idref" /></Data></Cell>
+			<Cell><Data ss:Type="String"><xsl:value-of select="SupplementalDesc" /></Data></Cell>
+			<Cell><Data ss:Type="String"><xsl:value-of select="@required" /></Data></Cell>
+			<Cell><Data ss:Type="String"><xsl:value-of select="@repeating" /></Data></Cell>
+			<Cell><Data ss:Type="String"><xsl:value-of select="@logicflag" /></Data></Cell>
+			<Cell><Data ss:Type="String"><xsl:value-of select="@deprecated" /></Data></Cell>
+		   </Row>
+        </xsl:for-each>     
+        
+	  </Table>         
+  </xsl:template>
+	
+  <xsl:template name="content-table">
+		<Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="{count(DataTypes/DataType//Content)+1}" x:FullColumns="1" x:FullRows="1" ss:DefaultRowHeight="15">
+				   
+		<!-- header -->	   
+		   <Row>
+			<Cell><Data ss:Type="String">USAGE_PARENT</Data></Cell>
+			<Cell><Data ss:Type="String">USAGE_TAG</Data></Cell>
+			<Cell><Data ss:Type="String">USAGE_DESC</Data></Cell>
+			<Cell><Data ss:Type="String">USAGE_REQUIRED</Data></Cell>
+			<Cell><Data ss:Type="String">USAGE_REPEATING</Data></Cell>
+			<Cell><Data ss:Type="String">USAGE_LOGIC</Data></Cell>
+			<Cell><Data ss:Type="String">USAGE_OLD</Data></Cell>
+		   </Row>    
+        
+	  </Table>         
+  </xsl:template>
+  
 </xsl:stylesheet>
 
