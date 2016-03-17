@@ -53,7 +53,7 @@
 	<xsd:complexType name="AircraftPolicyRq_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRQINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RQHEADER" minOccurs="0"/>
 			<xsd:element ref="AircraftLineBusiness" minOccurs="0"/>
 			<xsd:group ref="LOB_RQFOOTER" minOccurs="0"/>
 		</xsd:sequence>
@@ -61,7 +61,7 @@
 	<xsd:complexType name="AircraftPolicyRs_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRSINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RSHEADER" minOccurs="0"/>
 			<xsd:element ref="AircraftLineBusiness" minOccurs="0"/>
 			<xsd:group ref="LOB_RSFOOTER" minOccurs="0"/>
 			<xsd:element ref="AircraftPolicy" maxOccurs="unbounded"/>
@@ -70,7 +70,7 @@
 	<xsd:complexType name="AirportFBOPolicyRq_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRQINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RQHEADER" minOccurs="0"/>
 			<xsd:element ref="AirportFBOLineBusiness" minOccurs="0"/>
 			<xsd:group ref="LOB_RQFOOTER" minOccurs="0"/>
 		</xsd:sequence>
@@ -78,7 +78,7 @@
 	<xsd:complexType name="AirportFBOPolicyRs_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRSINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RSHEADER" minOccurs="0"/>
 			<xsd:element ref="AirportFBOLineBusiness" minOccurs="0"/>
 			<xsd:group ref="LOB_RSFOOTER" minOccurs="0"/>
 			<xsd:element ref="AirportFBOPolicy" minOccurs="0" maxOccurs="unbounded"/>
@@ -87,7 +87,7 @@
 	<xsd:complexType name="AviationPkgPolicyRq_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRQINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RQHEADER" minOccurs="0"/>
 			<xsd:group ref="AVIATIONPKGLOBS" minOccurs="0"/>
 			<xsd:element ref="CommlSubLocation" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:group ref="LOB_RQFOOTER" minOccurs="0"/>
@@ -96,7 +96,7 @@
 	<xsd:complexType name="AviationPkgPolicyRs_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRSINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RSHEADER" minOccurs="0"/>
 			<xsd:group ref="AVIATIONPKGLOBS" minOccurs="0"/>
 			<xsd:element ref="CommlSubLocation" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:group ref="LOB_RSFOOTER" minOccurs="0"/>
@@ -246,7 +246,7 @@
 	<xsd:complexType name="BoilerMachineryPolicyRq_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRQINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RQHEADER" minOccurs="0"/>
 			<xsd:element ref="BoilerMachineryLineBusiness" minOccurs="0"/>
 			<xsd:element ref="CommlSubLocation" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:group ref="LOB_RQFOOTER" minOccurs="0"/>
@@ -255,7 +255,7 @@
 	<xsd:complexType name="BoilerMachineryPolicyRs_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRSINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RSHEADER" minOccurs="0"/>
 			<xsd:element ref="BoilerMachineryLineBusiness" minOccurs="0"/>
 			<xsd:element ref="CommlSubLocation" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:group ref="LOB_RSFOOTER" minOccurs="0"/>
@@ -265,7 +265,7 @@
 	<xsd:complexType name="BOPPolicyRq_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRQINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RQHEADER" minOccurs="0"/>
 			<xsd:element ref="BOPLineBusiness" minOccurs="0"/>
 			<xsd:element ref="CommlSubLocation" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:group ref="LOB_RQFOOTER" minOccurs="0"/>
@@ -273,7 +273,7 @@
 	</xsd:complexType>
 	<xsd:complexType name="BOPPolicyRs_Type">
 		<xsd:sequence>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RSHEADER" minOccurs="0"/>
 			<xsd:element ref="BOPLineBusiness" minOccurs="0"/>
 			<xsd:group ref="LOB_RSFOOTER" minOccurs="0"/>
 			<xsd:element ref="BOPPolicy" minOccurs="0" maxOccurs="unbounded"/>
@@ -354,7 +354,7 @@
 	<xsd:complexType name="CommlAutoPolicyRq_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRQINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RQHEADER" minOccurs="0"/>
 			<xsd:element ref="CommlAutoLineBusiness" minOccurs="0"/>
 			<xsd:group ref="LOB_RQFOOTER" minOccurs="0"/>
 		</xsd:sequence>
@@ -362,7 +362,7 @@
 	<xsd:complexType name="CommlAutoPolicyRs_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRSINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RSHEADER" minOccurs="0"/>
 			<xsd:element ref="CommlAutoLineBusiness" minOccurs="0"/>
 			<xsd:group ref="LOB_RSFOOTER" minOccurs="0"/>
 			<xsd:element ref="CommlAutoPolicy" minOccurs="0" maxOccurs="unbounded"/>
@@ -397,7 +397,7 @@
 	<xsd:complexType name="CommlInlandMarinePolicyRq_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRQINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RQHEADER" minOccurs="0"/>
 			<xsd:element ref="CommlInlandMarineLineBusiness" minOccurs="0"/>
 			<xsd:element ref="CommlSubLocation" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:group ref="LOB_RQFOOTER" minOccurs="0"/>
@@ -406,7 +406,7 @@
 	<xsd:complexType name="CommlInlandMarinePolicyRs_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRSINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RSHEADER" minOccurs="0"/>
 			<xsd:element ref="CommlInlandMarineLineBusiness" minOccurs="0"/>
 			<xsd:group ref="LOB_RSFOOTER" minOccurs="0"/>
 			<xsd:element ref="CommlIMPolicy" minOccurs="0" maxOccurs="unbounded"/>
@@ -428,7 +428,7 @@
 	<xsd:complexType name="CommlPkgPolicyRq_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRQINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RQHEADER" minOccurs="0"/>
 			<xsd:group ref="COMMLPKGLOBS" minOccurs="0"/>
 			<xsd:element ref="CommlSubLocation" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:group ref="LOB_RQFOOTER" minOccurs="0"/>
@@ -437,7 +437,7 @@
 	<xsd:complexType name="CommlPkgPolicyRs_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRSINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RSHEADER" minOccurs="0"/>
 			<xsd:group ref="COMMLPKGLOBS" minOccurs="0"/>
 			<xsd:element ref="CommlSubLocation" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:group ref="LOB_RSFOOTER" minOccurs="0"/>
@@ -447,7 +447,7 @@
 	<xsd:complexType name="CommlPropertyPolicyRq_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRQINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RQHEADER" minOccurs="0"/>
 			<xsd:element ref="CommlPropertyLineBusiness" minOccurs="0"/>
 			<xsd:element ref="CommlSubLocation" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:group ref="LOB_RQFOOTER" minOccurs="0"/>
@@ -456,7 +456,7 @@
 	<xsd:complexType name="CommlPropertyPolicyRs_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRSINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RSHEADER" minOccurs="0"/>
 			<xsd:element ref="CommlPropertyLineBusiness" minOccurs="0"/>
 			<xsd:group ref="LOB_RSFOOTER" minOccurs="0"/>
 			<xsd:element ref="CommlPropertyPolicy" minOccurs="0" maxOccurs="unbounded"/>
@@ -478,7 +478,7 @@
 	<xsd:complexType name="CommlUmbrellaPolicyRq_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRQINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RQHEADER" minOccurs="0"/>
 			<xsd:element ref="CommlUmbrellaLineBusiness" minOccurs="0"/>
 			<xsd:element ref="CommlSubLocation" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:group ref="LOB_RQFOOTER" minOccurs="0"/>
@@ -487,7 +487,7 @@
 	<xsd:complexType name="CommlUmbrellaPolicyRs_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRSINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RSHEADER" minOccurs="0"/>
 			<xsd:element ref="CommlUmbrellaLineBusiness" minOccurs="0"/>
 			<xsd:group ref="LOB_RSFOOTER" minOccurs="0"/>
 			<xsd:element ref="CommlUmbrellaPolicy" minOccurs="0" maxOccurs="unbounded"/>
@@ -526,7 +526,7 @@
 	<xsd:complexType name="CrimePolicyRq_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRQINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RQHEADER" minOccurs="0"/>
 			<xsd:element ref="CrimeLineBusiness" minOccurs="0"/>
 			<xsd:element ref="CommlSubLocation" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:group ref="LOB_RQFOOTER" minOccurs="0"/>
@@ -535,7 +535,7 @@
 	<xsd:complexType name="CrimePolicyRs_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRSINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RSHEADER" minOccurs="0"/>
 			<xsd:element ref="CrimeLineBusiness" minOccurs="0"/>
 			<xsd:group ref="LOB_RSFOOTER" minOccurs="0"/>
 			<xsd:element ref="CrimePolicy" minOccurs="0" maxOccurs="unbounded"/>
@@ -544,7 +544,7 @@
 	<xsd:complexType name="CyberLiabilityPolicyRq_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRQINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RQHEADER" minOccurs="0"/>
 			<xsd:element ref="CyberLiabilityLineBusiness" minOccurs="0"/>
 			<xsd:element ref="CommlSubLocation" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:group ref="LOB_RQFOOTER" minOccurs="0"/>
@@ -553,7 +553,7 @@
 	<xsd:complexType name="CyberLiabilityPolicyRs_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRSINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RSHEADER" minOccurs="0"/>
 			<xsd:element ref="CyberLiabilityLineBusiness" minOccurs="0"/>
 			<xsd:group ref="LOB_RSFOOTER" minOccurs="0"/>
 			<xsd:element ref="CyberLiabilityPolicy" minOccurs="0" maxOccurs="unbounded"/>
@@ -577,7 +577,7 @@
 	<xsd:complexType name="DirectorsAndOfficersPolicyRq_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRQINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RQHEADER" minOccurs="0"/>
 			<xsd:element ref="DirectorsAndOfficersLineBusiness" minOccurs="0"/>
 			<xsd:element ref="CommlSubLocation" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:group ref="LOB_RQFOOTER" minOccurs="0"/>
@@ -586,7 +586,7 @@
 	<xsd:complexType name="DirectorsAndOfficersPolicyRs_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRSINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RSHEADER" minOccurs="0"/>
 			<xsd:element ref="DirectorsAndOfficersLineBusiness" minOccurs="0"/>
 			<xsd:group ref="LOB_RSFOOTER" minOccurs="0"/>
 			<xsd:element ref="DirectorsAndOfficersPolicy" minOccurs="0" maxOccurs="unbounded"/>
@@ -595,7 +595,7 @@
 	<xsd:complexType name="DwellFirePolicyRq_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRQINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RQHEADER" minOccurs="0"/>
 			<xsd:element ref="DwellFireLineBusiness" minOccurs="0"/>
 			<xsd:group ref="LOB_RQFOOTER" minOccurs="0"/>
 		</xsd:sequence>
@@ -603,7 +603,7 @@
 	<xsd:complexType name="DwellFirePolicyRs_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRSINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RSHEADER" minOccurs="0"/>
 			<xsd:element ref="DwellFireLineBusiness" minOccurs="0"/>
 			<xsd:group ref="LOB_RSFOOTER" minOccurs="0"/>
 			<xsd:element ref="DwellFirePolicy" minOccurs="0" maxOccurs="unbounded"/>
@@ -612,7 +612,7 @@
 	<xsd:complexType name="EPLIPolicyRq_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRQINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RQHEADER" minOccurs="0"/>
 			<xsd:element ref="EPLILineBusiness" minOccurs="0"/>
 			<xsd:group ref="LOB_RQFOOTER" minOccurs="0"/>
 		</xsd:sequence>
@@ -620,7 +620,7 @@
 	<xsd:complexType name="EPLIPolicyRs_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRSINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RSHEADER" minOccurs="0"/>
 			<xsd:element ref="EPLILineBusiness" minOccurs="0"/>
 			<xsd:group ref="LOB_RSFOOTER" minOccurs="0"/>
 			<xsd:element ref="EPLIPolicy" minOccurs="0" maxOccurs="unbounded"/>
@@ -629,7 +629,7 @@
 	<xsd:complexType name="ErrorsAndOmissionsPolicyRq_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRQINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RQHEADER" minOccurs="0"/>
 			<xsd:element ref="ErrorsAndOmissionsLineBusiness" minOccurs="0"/>
 			<xsd:element ref="CommlSubLocation" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:group ref="LOB_RQFOOTER" minOccurs="0"/>
@@ -638,69 +638,28 @@
 	<xsd:complexType name="ErrorsAndOmissionsPolicyRs_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRSINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RSHEADER" minOccurs="0"/>
 			<xsd:element ref="ErrorsAndOmissionsLineBusiness" minOccurs="0"/>
 			<xsd:group ref="LOB_RSFOOTER" minOccurs="0"/>
 			<xsd:element ref="ErrorsAndOmissionsPolicy" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:complexType>
-	<xsd:complexType name="FarmPolicyAddRq_Type">
+	<xsd:complexType name="FarmPolicyRq_Type">
 		<xsd:sequence>
-			<xsd:group ref="MSGRQINFO"/>
-			<xsd:group ref="FARMPOLINFO"/>
+			<xsd:group ref="POLICYRQINFO" minOccurs="0"/>
+			<xsd:group ref="LOB_RQHEADER" minOccurs="0"/>
+			<xsd:element ref="FarmLineBusiness" minOccurs="0"/>
+			<xsd:element ref="FarmSubLocation" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:group ref="LOB_RQFOOTER" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:complexType>
-	<xsd:complexType name="FarmPolicyAddRs_Type">
+	<xsd:complexType name="FarmPolicyRs_Type">
 		<xsd:sequence>
-			<xsd:group ref="MSGRSINFO"/>
-			<xsd:group ref="FARMPOLINFO" minOccurs="0"/>
-			<xsd:element ref="PolicySummaryInfo" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="FarmPolicyFullImageNotify_Type">
-		<xsd:sequence>
-			<xsd:group ref="NOTIFYMSGINFO"/>
-			<xsd:group ref="FARMPOLINFO"/>
-			<xsd:group ref="FULLIMAGENOTIFY"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="FarmPolicyFullImageNotifyRs_Type">
-		<xsd:sequence>
-			<xsd:group ref="NOTIFYMSGRSINFO"/>
-			<xsd:group ref="FARMPOLINFO" minOccurs="0"/>
-			<xsd:group ref="FULLIMAGENOTIFY" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="FarmPolicyModRq_Type">
-		<xsd:sequence>
-			<xsd:group ref="MSGRQINFO"/>
-			<xsd:element ref="ModInfo" maxOccurs="unbounded"/>
-			<xsd:group ref="CANCELNONRENEWREINSTATE_CHOICE" minOccurs="0"/>
-			<xsd:group ref="FARMPOLINFO"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="FarmPolicyModRs_Type">
-		<xsd:sequence>
-			<xsd:group ref="MSGRSINFO"/>
-			<xsd:element ref="ModInfo" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:group ref="CANCELNONRENEWREINSTATE_CHOICE" minOccurs="0"/>
-			<xsd:group ref="FARMPOLINFO" minOccurs="0"/>
-			<xsd:element ref="PolicySummaryInfo" minOccurs="0"/>
-			<xsd:element ref="FarmPolicy" minOccurs="0" maxOccurs="unbounded"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="FarmPolicyQuoteInqRq_Type">
-		<xsd:sequence>
-			<xsd:group ref="MSGRQINFO"/>
-			<xsd:group ref="FARMPOLINFO"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="FarmPolicyQuoteInqRs_Type">
-		<xsd:sequence>
-			<xsd:group ref="MSGRSINFO"/>
-			<xsd:element ref="AdditionalQuotedScenario" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:group ref="FARMPOLINFO" minOccurs="0"/>
-			<xsd:element ref="PolicySummaryInfo" minOccurs="0"/>
+			<xsd:group ref="POLICYRSINFO" minOccurs="0"/>
+			<xsd:group ref="LOB_RSHEADER" minOccurs="0"/>
+			<xsd:element ref="FarmLineBusiness" minOccurs="0"/>
+			<xsd:element ref="FarmSubLocation" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:group ref="LOB_RSFOOTER" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:complexType>
 	<xsd:complexType name="FinancialResponsibilityNotify_Type">
@@ -723,7 +682,7 @@
 	<xsd:complexType name="GeneralLiabilityPolicyRq_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRQINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RQHEADER" minOccurs="0"/>
 			<xsd:element ref="GeneralLiabilityLineBusiness" minOccurs="0"/>
 			<xsd:element ref="CommlSubLocation" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:group ref="LOB_RQFOOTER" minOccurs="0"/>
@@ -732,7 +691,7 @@
 	<xsd:complexType name="GeneralLiabilityPolicyRs_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRSINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RSHEADER" minOccurs="0"/>
 			<xsd:element ref="GeneralLiabilityLineBusiness" minOccurs="0"/>
 			<xsd:group ref="LOB_RSFOOTER" minOccurs="0"/>
 			<xsd:element ref="GeneralLiabilityPolicy" minOccurs="0" maxOccurs="unbounded"/>
@@ -754,7 +713,7 @@
 	<xsd:complexType name="HangarLiabilityPolicyRq_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRQINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RQHEADER" minOccurs="0"/>
 			<xsd:element ref="HangarLiabilityLineBusiness" minOccurs="0"/>
 			<xsd:group ref="LOB_RQFOOTER" minOccurs="0"/>
 		</xsd:sequence>
@@ -762,7 +721,7 @@
 	<xsd:complexType name="HangarLiabilityPolicyRs_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRSINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RSHEADER" minOccurs="0"/>
 			<xsd:element ref="HangarLiabilityLineBusiness" minOccurs="0"/>
 			<xsd:group ref="LOB_RSFOOTER" minOccurs="0"/>
 			<xsd:element ref="HangarLiabilityPolicy" minOccurs="0" maxOccurs="unbounded"/>
@@ -771,7 +730,7 @@
 	<xsd:complexType name="HomePolicyRq_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRQINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RQHEADER" minOccurs="0"/>
 			<xsd:element ref="HomeLineBusiness" minOccurs="0"/>
 			<xsd:group ref="LOB_RQFOOTER" minOccurs="0"/>
 		</xsd:sequence>
@@ -779,7 +738,7 @@
 	<xsd:complexType name="HomePolicyRs_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRSINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RSHEADER" minOccurs="0"/>
 			<xsd:element ref="HomeLineBusiness" minOccurs="0"/>
 			<xsd:group ref="LOB_RSFOOTER" minOccurs="0"/>
 			<xsd:element ref="HomePolicy" minOccurs="0" maxOccurs="unbounded"/>
@@ -803,7 +762,7 @@
 	<xsd:complexType name="PersAutoPolicyRq_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRQINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RQHEADER" minOccurs="0"/>
 			<xsd:element ref="PersAutoLineBusiness" minOccurs="0"/>
 			<xsd:group ref="LOB_RQFOOTER" minOccurs="0"/>
 		</xsd:sequence>
@@ -811,7 +770,7 @@
 	<xsd:complexType name="PersAutoPolicyRs_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRSINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RSHEADER" minOccurs="0"/>
 			<xsd:element ref="PersAutoLineBusiness" minOccurs="0"/>
 			<xsd:group ref="LOB_RSFOOTER" minOccurs="0"/>
 			<xsd:element ref="PersAutoPolicy" minOccurs="0" maxOccurs="unbounded"/>
@@ -820,14 +779,14 @@
 	<xsd:complexType name="PersInlandMarinePolicyRq_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRQINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RSHEADER" minOccurs="0"/>
 			<xsd:element ref="PersInlandMarineLineBusiness" minOccurs="0"/>
 			<xsd:group ref="LOB_RQFOOTER" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:complexType>
 	<xsd:complexType name="PersInlandMarinePolicyRs_Type">
 		<xsd:sequence>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RSHEADER" minOccurs="0"/>
 			<xsd:element ref="PersInlandMarineLineBusiness" minOccurs="0"/>
 			<xsd:group ref="LOB_RSFOOTER" minOccurs="0"/>
 			<xsd:element ref="PersInlandMarinePolicy" minOccurs="0" maxOccurs="unbounded"/>
@@ -836,21 +795,23 @@
 	<xsd:complexType name="PersPkgPolicyRq_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRQINFO" minOccurs="0"/>
-			<xsd:group ref="PERSPKGPOLINFO" minOccurs="0"/>
+			<xsd:group ref="LOB_RQHEADER" minOccurs="0"/>
+			<xsd:group ref="PERSPKGLOBS" minOccurs="0"/>
 			<xsd:group ref="LOB_RQFOOTER" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:complexType>
 	<xsd:complexType name="PersPkgPolicyRs_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRSINFO" minOccurs="0"/>
-			<xsd:group ref="PERSPKGPOLINFO" minOccurs="0"/>
+			<xsd:group ref="LOB_RSHEADER" minOccurs="0"/>
+			<xsd:group ref="PERSPKGLOBS" minOccurs="0"/>
 			<xsd:group ref="LOB_RSFOOTER" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:complexType>
 	<xsd:complexType name="PersUmbrellaPolicyRq_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRQINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RQHEADER" minOccurs="0"/>
 			<xsd:element ref="PersUmbrellaLineBusiness" minOccurs="0"/>
 			<xsd:group ref="LOB_RQFOOTER" minOccurs="0"/>
 		</xsd:sequence>
@@ -858,7 +819,7 @@
 	<xsd:complexType name="PersUmbrellaPolicyRs_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRSINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RSHEADER" minOccurs="0"/>
 			<xsd:element ref="PersUmbrellaLineBusiness" minOccurs="0"/>
 			<xsd:group ref="LOB_RSFOOTER" minOccurs="0"/>
 			<xsd:element ref="PersUmbrellaPolicy" minOccurs="0" maxOccurs="unbounded"/>
@@ -869,6 +830,60 @@
 			<xsd:group ref="MSGRQINFO"/>
 			<xsd:element ref="Producer"/>
 			<xsd:element ref="QuoteInfo"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="PolicyRq_Type">
+		<xsd:sequence>
+			<xsd:group ref="POLICYRQINFO" minOccurs="0"/>
+			<xsd:group ref="LOB_RQHEADER" minOccurs="0"/>
+			<xsd:element ref="AircraftLineBusiness" minOccurs="0"/>
+			<xsd:element ref="AirportFBOLineBusiness" minOccurs="0"/>
+			<xsd:element ref="HangarLiabilityLineBusiness" minOccurs="0"/>
+			<xsd:element ref="BoilerMachineryLineBusiness" minOccurs="0"/>
+			<xsd:element ref="BOPLineBusiness" minOccurs="0"/>
+			<xsd:element ref="CommlAutoLineBusiness" minOccurs="0"/>
+			<xsd:element ref="CommlInlandMarineLineBusiness" minOccurs="0"/>
+			<xsd:element ref="CommlPropertyLineBusiness" minOccurs="0"/>
+			<xsd:element ref="CommlUmbrellaLineBusiness" minOccurs="0"/>
+			<xsd:element ref="CrimeLineBusiness" minOccurs="0"/>
+			<xsd:element ref="CyberLiabilityLineBusiness" minOccurs="0"/>
+			<xsd:element ref="DirectorsAndOfficersLineBusiness" minOccurs="0"/>
+			<xsd:element ref="EDPLineBusiness" minOccurs="0"/>
+			<xsd:element ref="EPLILineBusiness" minOccurs="0"/>
+			<xsd:element ref="ErrorsAndOmissionsLineBusiness" minOccurs="0"/>
+			<xsd:element ref="GeneralLiabilityLineBusiness" minOccurs="0"/>
+			<xsd:element ref="ProductsLiabilityLineBusiness" minOccurs="0"/>
+			<xsd:element ref="WorkCompLineBusiness" minOccurs="0"/>
+			<xsd:group ref="PERSPKGLOBS" minOccurs="0"/>
+			<xsd:element ref="CommlSubLocation" minOccurs="0"/>
+			<xsd:group ref="LOB_RQFOOTER" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="PolicyRs_Type">
+		<xsd:sequence>
+			<xsd:group ref="POLICYRSINFO" minOccurs="0"/>
+			<xsd:group ref="LOB_RSHEADER" minOccurs="0"/>
+			<xsd:element ref="AircraftLineBusiness" minOccurs="0"/>
+			<xsd:element ref="AirportFBOLineBusiness" minOccurs="0"/>
+			<xsd:element ref="HangarLiabilityLineBusiness" minOccurs="0"/>
+			<xsd:element ref="BoilerMachineryLineBusiness" minOccurs="0"/>
+			<xsd:element ref="BOPLineBusiness" minOccurs="0"/>
+			<xsd:element ref="CommlAutoLineBusiness" minOccurs="0"/>
+			<xsd:element ref="CommlInlandMarineLineBusiness" minOccurs="0"/>
+			<xsd:element ref="CommlPropertyLineBusiness" minOccurs="0"/>
+			<xsd:element ref="CommlUmbrellaLineBusiness" minOccurs="0"/>
+			<xsd:element ref="CrimeLineBusiness" minOccurs="0"/>
+			<xsd:element ref="CyberLiabilityLineBusiness" minOccurs="0"/>
+			<xsd:element ref="DirectorsAndOfficersLineBusiness" minOccurs="0"/>
+			<xsd:element ref="EDPLineBusiness" minOccurs="0"/>
+			<xsd:element ref="EPLILineBusiness" minOccurs="0"/>
+			<xsd:element ref="ErrorsAndOmissionsLineBusiness" minOccurs="0"/>
+			<xsd:element ref="GeneralLiabilityLineBusiness" minOccurs="0"/>
+			<xsd:element ref="ProductsLiabilityLineBusiness" minOccurs="0"/>
+			<xsd:element ref="WorkCompLineBusiness" minOccurs="0"/>
+			<xsd:group ref="PERSPKGLOBS" minOccurs="0"/>
+			<xsd:element ref="CommlSubLocation" minOccurs="0"/>
+			<xsd:group ref="LOB_RSFOOTER" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:complexType>
 	<xsd:complexType name="PolicySyncRq_Type">
@@ -905,7 +920,7 @@
 	<xsd:complexType name="ProductsLiabilityPolicyRq_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRQINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RQHEADER" minOccurs="0"/>
 			<xsd:element ref="ProductsLiabilityLineBusiness" minOccurs="0"/>
 			<xsd:group ref="LOB_RQFOOTER" minOccurs="0"/>
 		</xsd:sequence>
@@ -913,7 +928,7 @@
 	<xsd:complexType name="ProductsLiabilityPolicyRs_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRSINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RSHEADER" minOccurs="0"/>
 			<xsd:element ref="ProductsLiabilityLineBusiness" minOccurs="0"/>
 			<xsd:group ref="LOB_RSFOOTER" minOccurs="0"/>
 			<xsd:element ref="ProductsLiabilityPolicy" minOccurs="0" maxOccurs="unbounded"/>
@@ -1177,7 +1192,7 @@
 	<xsd:complexType name="WatercraftPolicyRq_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRQINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RQHEADER" minOccurs="0"/>
 			<xsd:element ref="WatercraftLineBusiness" minOccurs="0"/>
 			<xsd:group ref="LOB_RQFOOTER" minOccurs="0"/>
 		</xsd:sequence>
@@ -1185,7 +1200,7 @@
 	<xsd:complexType name="WatercraftPolicyRs_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRSINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RSHEADER" minOccurs="0"/>
 			<xsd:element ref="WatercraftLineBusiness" minOccurs="0"/>
 			<xsd:group ref="LOB_RSFOOTER" minOccurs="0"/>
 			<xsd:element ref="WatercraftPolicy" minOccurs="0" maxOccurs="unbounded"/>
@@ -1194,7 +1209,7 @@
 	<xsd:complexType name="WorkCompPolicyRq_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRQINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RQHEADER" minOccurs="0"/>
 			<xsd:element ref="WorkCompLineBusiness" minOccurs="0"/>
 			<xsd:group ref="LOB_RQFOOTER" minOccurs="0"/>
 		</xsd:sequence>
@@ -1202,7 +1217,7 @@
 	<xsd:complexType name="WorkCompPolicyRs_Type">
 		<xsd:sequence>
 			<xsd:group ref="POLICYRSINFO" minOccurs="0"/>
-			<xsd:group ref="LOB_HEADER" minOccurs="0"/>
+			<xsd:group ref="LOB_RSHEADER" minOccurs="0"/>
 			<xsd:element ref="WorkCompLineBusiness" minOccurs="0"/>
 			<xsd:group ref="LOB_RSFOOTER" minOccurs="0"/>
 			<xsd:element ref="WorkCompPolicy" minOccurs="0" maxOccurs="unbounded"/>
@@ -1297,7 +1312,6 @@
 			<xsd:element ref="SuppressNotificationInd" minOccurs="0"/>
 			<xsd:element ref="SendSPRequestsInd" minOccurs="0"/>
 			<xsd:element ref="PendingResponseInfo" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element ref="MsgSetInfo" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="BaseSvcRs" minOccurs="0"/>
 			<xsd:element ref="InsuranceSvcRs" minOccurs="0" maxOccurs="unbounded"/>
 			<xsd:element ref="SuretySvcRs" minOccurs="0" maxOccurs="unbounded"/>
@@ -1354,6 +1368,8 @@
 	</xsd:group>
 	<xsd:group name="INSURANCESVCRQMSGS">
 		<xsd:choice>
+			<xsd:element ref="PolicyRq"/>
+			<xsd:element ref="PolicyRs"/>
 			<xsd:element ref="AircraftPolicyRq"/>
 			<xsd:element ref="AirportFBOPolicyRq"/>
 			<xsd:element ref="AviationPkgPolicyRq"/>
@@ -1380,6 +1396,7 @@
 			<xsd:element ref="PersPkgPolicyRq"/>
 			<xsd:element ref="PersUmbrellaPolicyRq"/>
 			<xsd:element ref="WatercraftPolicyRq"/>
+			<xsd:element ref="FarmPolicyRq"/>
 			<xsd:element ref="DwellFirePolicyAddRq"/>
 			<xsd:element ref="DwellFirePolicyQuoteInqRq"/>
 			<xsd:element ref="HomePolicyAddRq"/>
@@ -1538,6 +1555,7 @@
 			<xsd:element ref="PersPkgPolicyRs"/>
 			<xsd:element ref="PersUmbrellaPolicyRs"/>
 			<xsd:element ref="WatercraftPolicyRs"/>
+			<xsd:element ref="FarmPolicyRs"/>
 			<xsd:element ref="DwellFirePolicyAddRs"/>
 			<xsd:element ref="DwellFirePolicyQuoteInqRs"/>
 			<xsd:element ref="HomePolicyAddRs"/>
@@ -1892,14 +1910,14 @@
 	<xsd:element name="DirectorsAndOfficersPolicyQuoteInqRs" type="DirectorsAndOfficersPolicyRs_Type"/>
 	<xsd:element name="DirectorsAndOfficersPolicyRq" type="DirectorsAndOfficersPolicyRq_Type"/>
 	<xsd:element name="DirectorsAndOfficersPolicyRs" type="DirectorsAndOfficersPolicyRs_Type"/>
-	<xsd:element name="DwellFirePolicyAddRq"/>
-	<xsd:element name="DwellFirePolicyAddRs"/>
-	<xsd:element name="DwellFirePolicyFullImageNotify"/>
-	<xsd:element name="DwellFirePolicyFullImageNotifyRs"/>
-	<xsd:element name="DwellFirePolicyModRq"/>
-	<xsd:element name="DwellFirePolicyModRs"/>
-	<xsd:element name="DwellFirePolicyQuoteInqRq"/>
-	<xsd:element name="DwellFirePolicyQuoteInqRs"/>
+	<xsd:element name="DwellFirePolicyAddRq" type="DwellFirePolicyRq_Type"/>
+	<xsd:element name="DwellFirePolicyAddRs" type="DwellFirePolicyRs_Type"/>
+	<xsd:element name="DwellFirePolicyFullImageNotify" type="DwellFirePolicyRq_Type"/>
+	<xsd:element name="DwellFirePolicyFullImageNotifyRs" type="DwellFirePolicyRs_Type"/>
+	<xsd:element name="DwellFirePolicyModRq" type="DwellFirePolicyRq_Type"/>
+	<xsd:element name="DwellFirePolicyModRs" type="DwellFirePolicyRs_Type"/>
+	<xsd:element name="DwellFirePolicyQuoteInqRq" type="DwellFirePolicyRq_Type"/>
+	<xsd:element name="DwellFirePolicyQuoteInqRs" type="DwellFirePolicyRs_Type"/>
 	<xsd:element name="DwellFirePolicyRq" type="DwellFirePolicyRq_Type"/>
 	<xsd:element name="DwellFirePolicyRs" type="DwellFirePolicyRs_Type"/>
 	<xsd:element name="EPLIPolicyAddRq" type="EPLIPolicyRq_Type"/>
@@ -1922,14 +1940,16 @@
 	<xsd:element name="ErrorsAndOmissionsPolicyQuoteInqRs" type="ErrorsAndOmissionsPolicyRs_Type"/>
 	<xsd:element name="ErrorsAndOmissionsPolicyRq" type="ErrorsAndOmissionsPolicyRq_Type"/>
 	<xsd:element name="ErrorsAndOmissionsPolicyRs" type="ErrorsAndOmissionsPolicyRs_Type"/>
-	<xsd:element name="FarmPolicyAddRq" type="FarmPolicyAddRq_Type"/>
-	<xsd:element name="FarmPolicyAddRs" type="FarmPolicyAddRs_Type"/>
-	<xsd:element name="FarmPolicyFullImageNotify" type="FarmPolicyFullImageNotify_Type"/>
-	<xsd:element name="FarmPolicyFullImageNotifyRs" type="FarmPolicyFullImageNotifyRs_Type"/>
-	<xsd:element name="FarmPolicyModRq" type="FarmPolicyModRq_Type"/>
-	<xsd:element name="FarmPolicyModRs" type="FarmPolicyModRs_Type"/>
-	<xsd:element name="FarmPolicyQuoteInqRq" type="FarmPolicyQuoteInqRq_Type"/>
-	<xsd:element name="FarmPolicyQuoteInqRs" type="FarmPolicyQuoteInqRs_Type"/>
+	<xsd:element name="FarmPolicyAddRq" type="FarmPolicyRq_Type"/>
+	<xsd:element name="FarmPolicyAddRs" type="FarmPolicyRs_Type"/>
+	<xsd:element name="FarmPolicyFullImageNotify" type="FarmPolicyRq_Type"/>
+	<xsd:element name="FarmPolicyFullImageNotifyRs" type="FarmPolicyRs_Type"/>
+	<xsd:element name="FarmPolicyModRq" type="FarmPolicyRq_Type"/>
+	<xsd:element name="FarmPolicyModRs" type="FarmPolicyRs_Type"/>
+	<xsd:element name="FarmPolicyQuoteInqRq" type="FarmPolicyRq_Type"/>
+	<xsd:element name="FarmPolicyQuoteInqRs" type="FarmPolicyRs_Type"/>
+	<xsd:element name="FarmPolicyRq" type="FarmPolicyRq_Type"/>
+	<xsd:element name="FarmPolicyRs" type="FarmPolicyRs_Type"/>
 	<xsd:element name="FinancialResponsibilityNotify" type="FinancialResponsibilityNotify_Type"/>
 	<xsd:element name="FinancialResponsibilityNotifyRs" type="FinancialResponsibilityNotifyRs_Type"/>
 	<xsd:element name="GeneralLiabilityPolicyAddRq" type="GeneralLiabilityPolicyRq_Type"/>
@@ -1954,57 +1974,59 @@
 	<xsd:element name="HangarLiabilityPolicyQuoteInqRs" type="HangarLiabilityPolicyRs_Type"/>
 	<xsd:element name="HangarLiabilityPolicyRq" type="HangarLiabilityPolicyRq_Type"/>
 	<xsd:element name="HangarLiabilityPolicyRs" type="HangarLiabilityPolicyRs_Type"/>
-	<xsd:element name="HomePolicyAddRq"/>
-	<xsd:element name="HomePolicyAddRs"/>
-	<xsd:element name="HomePolicyFullImageNotify"/>
-	<xsd:element name="HomePolicyFullImageNotifyRs"/>
-	<xsd:element name="HomePolicyModRq"/>
-	<xsd:element name="HomePolicyModRs"/>
-	<xsd:element name="HomePolicyQuoteInqRq"/>
-	<xsd:element name="HomePolicyQuoteInqRs"/>
+	<xsd:element name="HomePolicyAddRq" type="HomePolicyRq_Type"/>
+	<xsd:element name="HomePolicyAddRs" type="HomePolicyRs_Type"/>
+	<xsd:element name="HomePolicyFullImageNotify" type="HomePolicyRq_Type"/>
+	<xsd:element name="HomePolicyFullImageNotifyRs" type="HomePolicyRs_Type"/>
+	<xsd:element name="HomePolicyModRq" type="HomePolicyRq_Type"/>
+	<xsd:element name="HomePolicyModRs" type="HomePolicyRs_Type"/>
+	<xsd:element name="HomePolicyQuoteInqRq" type="HomePolicyRq_Type"/>
+	<xsd:element name="HomePolicyQuoteInqRs" type="HomePolicyRs_Type"/>
 	<xsd:element name="HomePolicyRq" type="HomePolicyRq_Type"/>
 	<xsd:element name="HomePolicyRs" type="HomePolicyRs_Type"/>
-	<xsd:element name="PersAutoPolicyAddRq"/>
-	<xsd:element name="PersAutoPolicyAddRs"/>
-	<xsd:element name="PersAutoPolicyFullImageNotify"/>
-	<xsd:element name="PersAutoPolicyFullImageNotifyRs"/>
-	<xsd:element name="PersAutoPolicyModRq"/>
-	<xsd:element name="PersAutoPolicyModRs"/>
-	<xsd:element name="PersAutoPolicyQuoteInqRq"/>
-	<xsd:element name="PersAutoPolicyQuoteInqRs"/>
+	<xsd:element name="PersAutoPolicyAddRq" type="PersAutoPolicyRq_Type"/>
+	<xsd:element name="PersAutoPolicyAddRs" type="PersAutoPolicyRs_Type"/>
+	<xsd:element name="PersAutoPolicyFullImageNotify" type="PersAutoPolicyRq_Type"/>
+	<xsd:element name="PersAutoPolicyFullImageNotifyRs" type="PersAutoPolicyRs_Type"/>
+	<xsd:element name="PersAutoPolicyModRq" type="PersAutoPolicyRq_Type"/>
+	<xsd:element name="PersAutoPolicyModRs" type="PersAutoPolicyRs_Type"/>
+	<xsd:element name="PersAutoPolicyQuoteInqRq" type="PersAutoPolicyRq_Type"/>
+	<xsd:element name="PersAutoPolicyQuoteInqRs" type="PersAutoPolicyRs_Type"/>
 	<xsd:element name="PersAutoPolicyRq" type="PersAutoPolicyRq_Type"/>
 	<xsd:element name="PersAutoPolicyRs" type="PersAutoPolicyRs_Type"/>
-	<xsd:element name="PersInlandMarinePolicyAddRq"/>
-	<xsd:element name="PersInlandMarinePolicyAddRs"/>
-	<xsd:element name="PersInlandMarinePolicyFullImageNotify"/>
-	<xsd:element name="PersInlandMarinePolicyFullImageNotifyRs"/>
-	<xsd:element name="PersInlandMarinePolicyModRq"/>
-	<xsd:element name="PersInlandMarinePolicyModRs"/>
-	<xsd:element name="PersInlandMarinePolicyQuoteInqRq"/>
-	<xsd:element name="PersInlandMarinePolicyQuoteInqRs"/>
+	<xsd:element name="PersInlandMarinePolicyAddRq" type="PersInlandMarinePolicyRq_Type"/>
+	<xsd:element name="PersInlandMarinePolicyAddRs" type="PersInlandMarinePolicyRs_Type"/>
+	<xsd:element name="PersInlandMarinePolicyFullImageNotify" type="PersInlandMarinePolicyRq_Type"/>
+	<xsd:element name="PersInlandMarinePolicyFullImageNotifyRs" type="PersInlandMarinePolicyRs_Type"/>
+	<xsd:element name="PersInlandMarinePolicyModRq" type="PersInlandMarinePolicyRq_Type"/>
+	<xsd:element name="PersInlandMarinePolicyModRs" type="PersInlandMarinePolicyRs_Type"/>
+	<xsd:element name="PersInlandMarinePolicyQuoteInqRq" type="PersInlandMarinePolicyRq_Type"/>
+	<xsd:element name="PersInlandMarinePolicyQuoteInqRs" type="PersInlandMarinePolicyRs_Type"/>
 	<xsd:element name="PersInlandMarinePolicyRq" type="PersInlandMarinePolicyRq_Type"/>
 	<xsd:element name="PersInlandMarinePolicyRs" type="PersInlandMarinePolicyRs_Type"/>
-	<xsd:element name="PersPkgPolicyAddRq"/>
-	<xsd:element name="PersPkgPolicyAddRs"/>
-	<xsd:element name="PersPkgPolicyFullImageNotify"/>
-	<xsd:element name="PersPkgPolicyFullImageNotifyRs"/>
-	<xsd:element name="PersPkgPolicyModRq"/>
-	<xsd:element name="PersPkgPolicyModRs"/>
-	<xsd:element name="PersPkgPolicyQuoteInqRq"/>
+	<xsd:element name="PersPkgPolicyAddRq" type="PersPkgPolicyRq_Type"/>
+	<xsd:element name="PersPkgPolicyAddRs" type="PersPkgPolicyRs_Type"/>
+	<xsd:element name="PersPkgPolicyFullImageNotify" type="PersPkgPolicyRq_Type"/>
+	<xsd:element name="PersPkgPolicyFullImageNotifyRs" type="PersPkgPolicyRs_Type"/>
+	<xsd:element name="PersPkgPolicyModRq" type="PersPkgPolicyRq_Type"/>
+	<xsd:element name="PersPkgPolicyModRs" type="PersPkgPolicyRs_Type"/>
+	<xsd:element name="PersPkgPolicyQuoteInqRq" type="PersPkgPolicyRq_Type"/>
 	<xsd:element name="PersPkgPolicyQuoteInqRs" type="PersPkgPolicy_Type"/>
 	<xsd:element name="PersPkgPolicyRq" type="PersPkgPolicyRq_Type"/>
 	<xsd:element name="PersPkgPolicyRs" type="PersPkgPolicyRs_Type"/>
-	<xsd:element name="PersUmbrellaPolicyAddRq"/>
-	<xsd:element name="PersUmbrellaPolicyAddRs"/>
-	<xsd:element name="PersUmbrellaPolicyFullImageNotify"/>
-	<xsd:element name="PersUmbrellaPolicyFullImageNotifyRs"/>
-	<xsd:element name="PersUmbrellaPolicyModRq"/>
-	<xsd:element name="PersUmbrellaPolicyModRs"/>
-	<xsd:element name="PersUmbrellaPolicyQuoteInqRq"/>
-	<xsd:element name="PersUmbrellaPolicyQuoteInqRs"/>
+	<xsd:element name="PersUmbrellaPolicyAddRq" type="PersUmbrellaPolicyRq_Type"/>
+	<xsd:element name="PersUmbrellaPolicyAddRs" type="PersUmbrellaPolicyRs_Type"/>
+	<xsd:element name="PersUmbrellaPolicyFullImageNotify" type="PersUmbrellaPolicyRq_Type"/>
+	<xsd:element name="PersUmbrellaPolicyFullImageNotifyRs" type="PersUmbrellaPolicyRs_Type"/>
+	<xsd:element name="PersUmbrellaPolicyModRq" type="PersUmbrellaPolicyRq_Type"/>
+	<xsd:element name="PersUmbrellaPolicyModRs" type="PersUmbrellaPolicyRs_Type"/>
+	<xsd:element name="PersUmbrellaPolicyQuoteInqRq" type="PersUmbrellaPolicyRq_Type"/>
+	<xsd:element name="PersUmbrellaPolicyQuoteInqRs" type="PersUmbrellaPolicyRs_Type"/>
 	<xsd:element name="PersUmbrellaPolicyRq" type="PersUmbrellaPolicyRq_Type"/>
 	<xsd:element name="PersUmbrellaPolicyRs" type="PersUmbrellaPolicyRs_Type"/>
 	<xsd:element name="PolicyQuoteInqResendRq" type="PolicyQuoteInqResendRq_Type"/>
+	<xsd:element name="PolicyRq" type="PolicyRq_Type"/>
+	<xsd:element name="PolicyRs" type="PolicyRs_Type"/>
 	<xsd:element name="PolicySyncRq" type="PolicySyncRq_Type"/>
 	<xsd:element name="PolicySyncRs" type="PolicySyncRs_Type"/>
 	<xsd:element name="PremiumAuditNotificationAddRq" type="PremiumAuditNotificationAddRq_Type"/>
@@ -2049,14 +2071,14 @@
 	<xsd:element name="VehicleTelematicsNotifyRs" type="VehicleTelematicsNotifyRs_Type"/>
 	<xsd:element name="ViewInqRq" type="ViewInqRq_Type"/>
 	<xsd:element name="ViewInqRs" type="ViewInqRs_Type"/>
-	<xsd:element name="WatercraftPolicyAddRq"/>
-	<xsd:element name="WatercraftPolicyAddRs"/>
-	<xsd:element name="WatercraftPolicyFullImageNotify"/>
-	<xsd:element name="WatercraftPolicyFullImageNotifyRs"/>
-	<xsd:element name="WatercraftPolicyModRq"/>
-	<xsd:element name="WatercraftPolicyModRs"/>
-	<xsd:element name="WatercraftPolicyQuoteInqRq"/>
-	<xsd:element name="WatercraftPolicyQuoteInqRs"/>
+	<xsd:element name="WatercraftPolicyAddRq" type="WatercraftPolicyRq_Type"/>
+	<xsd:element name="WatercraftPolicyAddRs" type="WatercraftPolicyRs_Type"/>
+	<xsd:element name="WatercraftPolicyFullImageNotify" type="WatercraftPolicyRq_Type"/>
+	<xsd:element name="WatercraftPolicyFullImageNotifyRs" type="WatercraftPolicyRs_Type"/>
+	<xsd:element name="WatercraftPolicyModRq" type="WatercraftPolicyRq_Type"/>
+	<xsd:element name="WatercraftPolicyModRs" type="WatercraftPolicyRs_Type"/>
+	<xsd:element name="WatercraftPolicyQuoteInqRq" type="WatercraftPolicyRq_Type"/>
+	<xsd:element name="WatercraftPolicyQuoteInqRs" type="WatercraftPolicyRs_Type"/>
 	<xsd:element name="WatercraftPolicyRq" type="WatercraftPolicyRq_Type"/>
 	<xsd:element name="WatercraftPolicyRs" type="WatercraftPolicyRs_Type"/>
 	<xsd:element name="WorkCompPolicyAddRq" type="WorkCompPolicyRq_Type"/>
