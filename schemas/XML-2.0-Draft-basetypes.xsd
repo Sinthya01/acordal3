@@ -1,472 +1,1687 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns="http://www.ACORD.org/standards/PC/ACORD2/xml/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.ACORD.org/standards/PC/ACORD2/xml/" elementFormDefault="unqualified" attributeFormDefault="unqualified" version="2.0-Draft">
-	<xsd:annotation>
-		<xsd:appinfo>
-			<version>2.0-Draft</version>
-			<status>Draft</status>
-			<genDate>Thu Mar 03 12:28:22 2016</genDate>
-		</xsd:appinfo>
-	</xsd:annotation>
-	<xsd:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml-ns.xsd"/>
-	<xsd:simpleType name="AssignedIdentifier_NoID">
-		<xsd:restriction base="xsd:string">
-			<xsd:maxLength value="36"/>
-			<xsd:minLength value="1"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="Boolean_NoID">
-		<xsd:restriction base="xsd:boolean">
-			<xsd:pattern value="\d"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="C-10_NoID">
-		<xsd:restriction base="xsd:string">
-			<xsd:maxLength value="10"/>
-			<xsd:minLength value="1"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="C-100_NoID">
-		<xsd:restriction base="xsd:string">
-			<xsd:maxLength value="100"/>
-			<xsd:minLength value="1"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="C-11_NoID">
-		<xsd:restriction base="xsd:string">
-			<xsd:maxLength value="11"/>
-			<xsd:minLength value="1"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="C-12_NoID">
-		<xsd:restriction base="xsd:string">
-			<xsd:maxLength value="12"/>
-			<xsd:minLength value="1"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="C-13_NoID">
-		<xsd:restriction base="xsd:string">
-			<xsd:maxLength value="13"/>
-			<xsd:minLength value="1"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="C-15_NoID">
-		<xsd:restriction base="xsd:string">
-			<xsd:maxLength value="15"/>
-			<xsd:minLength value="1"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="C-2_NoID">
-		<xsd:restriction base="xsd:string">
-			<xsd:maxLength value="2"/>
-			<xsd:minLength value="1"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="C-20_NoID">
-		<xsd:restriction base="xsd:string">
-			<xsd:maxLength value="20"/>
-			<xsd:minLength value="1"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="C-2048_NoID">
-		<xsd:restriction base="xsd:string">
-			<xsd:maxLength value="2048"/>
-			<xsd:minLength value="1"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="C-25_NoID">
-		<xsd:restriction base="xsd:string">
-			<xsd:maxLength value="25"/>
-			<xsd:minLength value="1"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="C-255_NoID">
-		<xsd:restriction base="xsd:string">
-			<xsd:maxLength value="255"/>
-			<xsd:minLength value="1"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="C-30_NoID">
-		<xsd:restriction base="xsd:string">
-			<xsd:maxLength value="30"/>
-			<xsd:minLength value="1"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="C-32_NoID">
-		<xsd:restriction base="xsd:string">
-			<xsd:maxLength value="32"/>
-			<xsd:minLength value="1"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="C-36_NoID">
-		<xsd:restriction base="xsd:string">
-			<xsd:maxLength value="36"/>
-			<xsd:minLength value="1"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="C-4_NoID">
-		<xsd:restriction base="xsd:string">
-			<xsd:maxLength value="4"/>
-			<xsd:minLength value="1"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="C-40_NoID">
-		<xsd:restriction base="xsd:string">
-			<xsd:maxLength value="40"/>
-			<xsd:minLength value="1"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="C-5_NoID">
-		<xsd:restriction base="xsd:string">
-			<xsd:maxLength value="5"/>
-			<xsd:minLength value="1"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="C-50_NoID">
-		<xsd:restriction base="xsd:string">
-			<xsd:maxLength value="50"/>
-			<xsd:minLength value="1"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="C-6_NoID">
-		<xsd:restriction base="xsd:string">
-			<xsd:maxLength value="6"/>
-			<xsd:minLength value="1"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="C-60_NoID">
-		<xsd:restriction base="xsd:string">
-			<xsd:maxLength value="60"/>
-			<xsd:minLength value="1"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="C-64_NoID">
-		<xsd:restriction base="xsd:string">
-			<xsd:maxLength value="64"/>
-			<xsd:minLength value="1"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="C-8_NoID">
-		<xsd:restriction base="xsd:string">
-			<xsd:maxLength value="8"/>
-			<xsd:minLength value="1"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="C-80_NoID">
-		<xsd:restriction base="xsd:string">
-			<xsd:maxLength value="80"/>
-			<xsd:minLength value="1"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="C-Infinite_NoID">
-		<xsd:restriction base="xsd:string">
-			<xsd:minLength value="1"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="Date_NoID">
-		<xsd:union memberTypes="xsd:date xsd:gYear xsd:gYearMonth"/>
-	</xsd:simpleType>
-	<xsd:simpleType name="DateTime_NoID">
-		<xsd:union memberTypes="xsd:date xsd:dateTime"/>
-	</xsd:simpleType>
-	<xsd:simpleType name="Decimal_NoID">
-		<xsd:restriction base="xsd:decimal">
-			<xsd:totalDigits value="15"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="Enumeration_Type">
-		<xsd:restriction base="xsd:token">
-			<xsd:maxLength value="80"/>
-			<xsd:minLength value="1"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="ID">
-		<xsd:restriction base="xsd:ID"/>
-	</xsd:simpleType>
-	<xsd:simpleType name="IDREF">
-		<xsd:restriction base="xsd:IDREF"/>
-	</xsd:simpleType>
-	<xsd:simpleType name="IDREFS">
-		<xsd:restriction base="xsd:IDREFS"/>
-	</xsd:simpleType>
-	<xsd:simpleType name="NC_Type">
-		<xsd:restriction base="xsd:token">
-			<xsd:minLength value="1"/>
-			<xsd:pattern value="[\p{IsBasicLatin}]*"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="PhoneNumberType_NoID">
-		<xsd:restriction base="NC_Type">
-			<xsd:maxLength value="32"/>
-			<xsd:minLength value="1"/>
-			<xsd:pattern value="\+\S+\-\S+\-\S+(\+\S+)?"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="RAWBINARYDATA">
-		<xsd:restriction base="xsd:string"/>
-	</xsd:simpleType>
-	<xsd:simpleType name="URLType_NoID">
-		<xsd:restriction base="xsd:anyURI">
-			<xsd:maxLength value="1024"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:complexType name="AssignedIdentifier">
-		<xsd:simpleContent>
-			<xsd:extension base="AssignedIdentifier_NoID">
-				<xsd:attribute name="id" type="ID"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:complexType name="Boolean">
-		<xsd:simpleContent>
-			<xsd:extension base="Boolean_NoID">
-				<xsd:attribute name="id" type="ID"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:complexType name="C-100">
-		<xsd:simpleContent>
-			<xsd:extension base="C-100_NoID">
-				<xsd:attribute name="id" type="ID"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:complexType name="C-11">
-		<xsd:simpleContent>
-			<xsd:extension base="C-11_NoID">
-				<xsd:attribute name="id" type="ID"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:complexType name="C-12">
-		<xsd:simpleContent>
-			<xsd:extension base="C-12_NoID">
-				<xsd:attribute name="id" type="ID"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:complexType name="C-13">
-		<xsd:simpleContent>
-			<xsd:extension base="C-13_NoID">
-				<xsd:attribute name="id" type="ID"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:complexType name="C-15">
-		<xsd:simpleContent>
-			<xsd:extension base="C-15_NoID">
-				<xsd:attribute name="id" type="ID"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:complexType name="C-2">
-		<xsd:simpleContent>
-			<xsd:extension base="C-2_NoID">
-				<xsd:attribute name="id" type="ID"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:complexType name="C-20">
-		<xsd:simpleContent>
-			<xsd:extension base="C-20_NoID">
-				<xsd:attribute name="id" type="ID"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:complexType name="C-2048">
-		<xsd:simpleContent>
-			<xsd:extension base="C-2048_NoID">
-				<xsd:attribute name="id" type="ID"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:complexType name="C-25">
-		<xsd:simpleContent>
-			<xsd:extension base="C-25_NoID">
-				<xsd:attribute name="id" type="ID"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:complexType name="C-255">
-		<xsd:simpleContent>
-			<xsd:extension base="C-255_NoID">
-				<xsd:attribute name="id" type="ID"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:complexType name="C-30">
-		<xsd:simpleContent>
-			<xsd:extension base="C-30_NoID">
-				<xsd:attribute name="id" type="ID"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:complexType name="C-32">
-		<xsd:simpleContent>
-			<xsd:extension base="C-32_NoID">
-				<xsd:attribute name="id" type="ID"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:complexType name="C-36">
-		<xsd:simpleContent>
-			<xsd:extension base="C-36_NoID">
-				<xsd:attribute name="id" type="ID"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:complexType name="C-4">
-		<xsd:simpleContent>
-			<xsd:extension base="C-4_NoID">
-				<xsd:attribute name="id" type="ID"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:complexType name="C-40">
-		<xsd:simpleContent>
-			<xsd:extension base="C-40_NoID">
-				<xsd:attribute name="id" type="ID"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:complexType name="C-5">
-		<xsd:simpleContent>
-			<xsd:extension base="C-5_NoID">
-				<xsd:attribute name="id" type="ID"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:complexType name="C-50">
-		<xsd:simpleContent>
-			<xsd:extension base="C-50_NoID">
-				<xsd:attribute name="id" type="ID"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:complexType name="C-6">
-		<xsd:simpleContent>
-			<xsd:extension base="C-6_NoID">
-				<xsd:attribute name="id" type="ID"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:complexType name="C-60">
-		<xsd:simpleContent>
-			<xsd:extension base="C-60_NoID">
-				<xsd:attribute name="id" type="ID"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:complexType name="C-64">
-		<xsd:simpleContent>
-			<xsd:extension base="C-64_NoID">
-				<xsd:attribute name="id" type="ID"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:complexType name="C-8">
-		<xsd:simpleContent>
-			<xsd:extension base="C-8_NoID">
-				<xsd:attribute name="id" type="ID"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:complexType name="C-80">
-		<xsd:simpleContent>
-			<xsd:extension base="C-80_NoID">
-				<xsd:attribute name="id" type="ID"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:complexType name="C-Infinite">
-		<xsd:simpleContent>
-			<xsd:extension base="C-Infinite_NoID">
-				<xsd:attribute name="id" type="ID"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:complexType name="Date">
-		<xsd:simpleContent>
-			<xsd:extension base="Date_NoID">
-				<xsd:attribute name="id" type="ID"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:complexType name="DateTime">
-		<xsd:simpleContent>
-			<xsd:extension base="DateTime_NoID">
-				<xsd:attribute name="id" type="ID"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:complexType name="Decimal">
-		<xsd:simpleContent>
-			<xsd:extension base="Decimal_NoID">
-				<xsd:attribute name="id" type="ID"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:complexType name="FormalDate">
-		<xsd:simpleContent>
-			<xsd:extension base="xsd:date">
-				<xsd:attribute name="id" type="ID"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:complexType name="IndustryCode_Type">
-		<xsd:simpleContent>
-			<xsd:extension base="Enumeration_Type">
-				<xsd:attribute name="id" type="ID"/>
-				<xsd:attribute name="CodeListRef" type="IDREF"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:complexType name="Long">
-		<xsd:simpleContent>
-			<xsd:extension base="xsd:int">
-				<xsd:attribute name="id" type="ID"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:complexType name="PercentDecimal">
-		<xsd:simpleContent>
-			<xsd:extension base="xsd:decimal">
-				<xsd:attribute name="id" type="ID"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:complexType name="PercentLong">
-		<xsd:simpleContent>
-			<xsd:extension base="xsd:int">
-				<xsd:attribute name="id" type="ID"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:complexType name="PhoneNumberType">
-		<xsd:simpleContent>
-			<xsd:extension base="PhoneNumberType_NoID">
-				<xsd:attribute name="id" type="ID"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:complexType name="Time">
-		<xsd:simpleContent>
-			<xsd:extension base="xsd:time">
-				<xsd:attribute name="id" type="ID"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:complexType name="URLType">
-		<xsd:simpleContent>
-			<xsd:extension base="URLType_NoID">
-				<xsd:attribute name="id" type="ID"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:complexType name="Year">
-		<xsd:simpleContent>
-			<xsd:extension base="xsd:gYear">
-				<xsd:attribute name="id" type="ID"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns="http://www.ACORD.org/standards/PC/ACORD2/xml/"
+            targetNamespace="http://www.ACORD.org/standards/PC/ACORD2/xml/"
+            elementFormDefault="unqualified"
+            attributeFormDefault="unqualified"
+            version="2.0-Draft">
+   <xsd:annotation>
+      <xsd:appinfo>
+         <version>2.0-Draft</version>
+         <status>Draft</status>
+         <genDate>Thu Mar 03 12:28:22 2016</genDate>
+      </xsd:appinfo>
+   </xsd:annotation>
+   <xsd:import namespace="http://www.w3.org/XML/1998/namespace"
+               schemaLocation="xml-ns.xsd"/>
+   <xsd:simpleType name="AssignedIdentifier_NoID">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>The AssignedIdentifier_NoID base class is used to define the AssignedIdentifier base class.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Assigned Identifier - No ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:string">
+         <xsd:maxLength value="36"/>
+         <xsd:minLength value="1"/>
+      </xsd:restriction>
+  </xsd:simpleType>
+   <xsd:simpleType name="Boolean_NoID">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>The Boolean_NoID base class is used to define the Boolean base class.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Boolean - No ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:boolean">
+         <xsd:pattern value="\d"/>
+      </xsd:restriction>
+  </xsd:simpleType>
+   <xsd:simpleType name="C-10_NoID">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>The C-10_NoID base class is used to define the C-10 base class.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 10, No ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:string">
+         <xsd:maxLength value="10"/>
+         <xsd:minLength value="1"/>
+      </xsd:restriction>
+  </xsd:simpleType>
+   <xsd:simpleType name="C-100_NoID">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>The C-100_NoID base class is used to define the C-100 base class.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 100, No ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:string">
+         <xsd:maxLength value="100"/>
+         <xsd:minLength value="1"/>
+      </xsd:restriction>
+  </xsd:simpleType>
+   <xsd:simpleType name="C-11_NoID">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>The C-11_NoID base class is used to define the C-11 base class.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 11, No ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:string">
+         <xsd:maxLength value="11"/>
+         <xsd:minLength value="1"/>
+      </xsd:restriction>
+  </xsd:simpleType>
+   <xsd:simpleType name="C-12_NoID">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>The C-12_NoID base class is used to define the C-12 base class.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 12, No ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:string">
+         <xsd:maxLength value="12"/>
+         <xsd:minLength value="1"/>
+      </xsd:restriction>
+  </xsd:simpleType>
+   <xsd:simpleType name="C-13_NoID">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>The C-13_NoID base class is used to define the C-13 base class.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 13, No ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:string">
+         <xsd:maxLength value="13"/>
+         <xsd:minLength value="1"/>
+      </xsd:restriction>
+  </xsd:simpleType>
+   <xsd:simpleType name="C-15_NoID">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>The C-15_NoID base class is used to define the C-15 base class.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 15, No ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:string">
+         <xsd:maxLength value="15"/>
+         <xsd:minLength value="1"/>
+      </xsd:restriction>
+  </xsd:simpleType>
+   <xsd:simpleType name="C-2_NoID">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>The C-2_NoID base class is used to define the C-2 base class.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 2, No ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:string">
+         <xsd:maxLength value="2"/>
+         <xsd:minLength value="1"/>
+      </xsd:restriction>
+  </xsd:simpleType>
+   <xsd:simpleType name="C-20_NoID">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>The C-20_NoID base class is used to define the C-20 base class.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 20, No ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:string">
+         <xsd:maxLength value="20"/>
+         <xsd:minLength value="1"/>
+      </xsd:restriction>
+  </xsd:simpleType>
+   <xsd:simpleType name="C-2048_NoID">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>The C-2048_NoID base class is used to define the C-2048 base class.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 2048, No ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:string">
+         <xsd:maxLength value="2048"/>
+         <xsd:minLength value="1"/>
+      </xsd:restriction>
+  </xsd:simpleType>
+   <xsd:simpleType name="C-25_NoID">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>The C-25_NoID base class is used to define the C-25 base class.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 25, No ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:string">
+         <xsd:maxLength value="25"/>
+         <xsd:minLength value="1"/>
+      </xsd:restriction>
+  </xsd:simpleType>
+   <xsd:simpleType name="C-255_NoID">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>The C-255_NoID base class is used to define the C-255 base class.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 255, No ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:string">
+         <xsd:maxLength value="255"/>
+         <xsd:minLength value="1"/>
+      </xsd:restriction>
+  </xsd:simpleType>
+   <xsd:simpleType name="C-30_NoID">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>The C-30_NoID base class is used to define the C-30 base class.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 30, No ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:string">
+         <xsd:maxLength value="30"/>
+         <xsd:minLength value="1"/>
+      </xsd:restriction>
+  </xsd:simpleType>
+   <xsd:simpleType name="C-32_NoID">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>The C-32_NoID base class is used to define the C-32 base class.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 32, No ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:string">
+         <xsd:maxLength value="32"/>
+         <xsd:minLength value="1"/>
+      </xsd:restriction>
+  </xsd:simpleType>
+   <xsd:simpleType name="C-36_NoID">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>The C-36_NoID base class is used to define the C-36 base class.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 36, No ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:string">
+         <xsd:maxLength value="36"/>
+         <xsd:minLength value="1"/>
+      </xsd:restriction>
+  </xsd:simpleType>
+   <xsd:simpleType name="C-4_NoID">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>The C-4_NoID base class is used to define the C-4 base class.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 4, No ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:string">
+         <xsd:maxLength value="4"/>
+         <xsd:minLength value="1"/>
+      </xsd:restriction>
+  </xsd:simpleType>
+   <xsd:simpleType name="C-40_NoID">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>The C-40_NoID base class is used to define the C-40 base class.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 40, No ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:string">
+         <xsd:maxLength value="40"/>
+         <xsd:minLength value="1"/>
+      </xsd:restriction>
+  </xsd:simpleType>
+   <xsd:simpleType name="C-5_NoID">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>The C-5_NoID base class is used to define the C-5 base class.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 5, No ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:string">
+         <xsd:maxLength value="5"/>
+         <xsd:minLength value="1"/>
+      </xsd:restriction>
+  </xsd:simpleType>
+   <xsd:simpleType name="C-50_NoID">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>The C-50_NoID base class is used to define the C-50 base class.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 50, No ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:string">
+         <xsd:maxLength value="50"/>
+         <xsd:minLength value="1"/>
+      </xsd:restriction>
+  </xsd:simpleType>
+   <xsd:simpleType name="C-6_NoID">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>The C-6_NoID base class is used to define the C-6 base class.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 6, No ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:string">
+         <xsd:maxLength value="6"/>
+         <xsd:minLength value="1"/>
+      </xsd:restriction>
+  </xsd:simpleType>
+   <xsd:simpleType name="C-60_NoID">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>The C-60_NoID base class is used to define the C-60 base class.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 60, No ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:string">
+         <xsd:maxLength value="60"/>
+         <xsd:minLength value="1"/>
+      </xsd:restriction>
+  </xsd:simpleType>
+   <xsd:simpleType name="C-64_NoID">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>The C-64_NoID base class is used to define the C-64 base class.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 64, No ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:string">
+         <xsd:maxLength value="64"/>
+         <xsd:minLength value="1"/>
+      </xsd:restriction>
+  </xsd:simpleType>
+   <xsd:simpleType name="C-8_NoID">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>The C-8_NoID base class is used to define the C-8 base class.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 8, No ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:string">
+         <xsd:maxLength value="8"/>
+         <xsd:minLength value="1"/>
+      </xsd:restriction>
+  </xsd:simpleType>
+   <xsd:simpleType name="C-80_NoID">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>The C-80_NoID base class is used to define the C-80 base class.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 80, No ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:string">
+         <xsd:maxLength value="80"/>
+         <xsd:minLength value="1"/>
+      </xsd:restriction>
+  </xsd:simpleType>
+   <xsd:simpleType name="C-Infinite_NoID">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>The C-Infinite_NoID base class is used to define the C-Infinite base class.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length Infinite, No ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:string">
+         <xsd:minLength value="1"/>
+      </xsd:restriction>
+  </xsd:simpleType>
+   <xsd:simpleType name="Date_NoID">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>The Date_NoID base class is used to define the Date base class.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Date - No ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:union memberTypes="xsd:date xsd:gYear xsd:gYearMonth"/>
+  </xsd:simpleType>
+   <xsd:simpleType name="DateTime_NoID">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>The DateTime_NoID base class is used to define the DateTime base class.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Date Time - No ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:union memberTypes="xsd:date xsd:dateTime"/>
+  </xsd:simpleType>
+   <xsd:simpleType name="Decimal_NoID">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>The Decimal_NoID base class is used to define the Decimal base class.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Decimal - No ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:decimal">
+         <xsd:totalDigits value="15"/>
+      </xsd:restriction>
+  </xsd:simpleType>
+   <xsd:simpleType name="Enumeration_Type">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>An Enumeration is an element where a number of valid values are defined within this specification.</p>
+               <p>
+                  <p>
+                     <b>Enumeration_Type is extended with:</b>
+                  </p>
+                  <table width="95%" border="1">
+                     <col valign="top"/>
+                     <col valign="top"/>
+                     <col valign="top"/>
+                     <col valign="top"/>
+                     <thead>
+                        <tr>
+                           <th>
+                              <p>Tag</p>
+                           </th>
+                           <th>
+                              <p>Type</p>
+                           </th>
+                           <th>
+                              <p>Usage</p>
+                           </th>
+                           <th>
+                              <p>Description</p>
+                           </th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>
+                              <p>@id</p>
+                           </td>
+                           <td>
+                              <p>&lt;ID&gt;</p>
+                           </td>
+                           <td>
+                              <p>Optional</p>
+                           </td>
+                           <td>
+                              <p>This attribute is an identifier to a specific element.</p>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Enumerated List Type</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:token">
+         <xsd:maxLength value="80"/>
+         <xsd:minLength value="1"/>
+      </xsd:restriction>
+  </xsd:simpleType>
+   <xsd:simpleType name="ID">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>An ACORD document provides a unique identifier with the XML stream that is used for referencing information within the document. This is a transient identifier that is only used to link information within a document stream. As the word transient implies, the identifiers are not meant for use once the message has been processed by the receiving system.</p>
+               <p>Transient identifiers in the specification are of the data type "Identifier Type." This is Character data that matches the XML rules for ID attribute data type values.</p>
+               <table width="95%" border="1">
+                  <col width="1.75in" valign="top"/>
+                  <col width="0.865in" valign="top"/>
+                  <col width="0.865in" valign="top"/>
+                  <col width="3in" valign="top"/>
+                  <thead>
+                     <tr>
+                        <th>
+                           <p>Tag</p>
+                        </th>
+                        <th>
+                           <p>Type</p>
+                        </th>
+                        <th>
+                           <p>Usage</p>
+                        </th>
+                        <th>
+                           <p>Description</p>
+                        </th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>
+                           <p>
+                              <att>id</att>
+                           </p>
+                        </td>
+                        <td>
+                           <p>Identifier Type</p>
+                        </td>
+                        <td>
+                           <p>Optional</p>
+                        </td>
+                        <td>
+                           <p>A document unique identifier used when an object (element) needs to be referenced elsewhere in the document.</p>
+                           <p>An ID should only be present on an element when it is being referenced within the stream.</p>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+               <p>Transient identifiers are not defined on framework tags. However, if a tag is defined at both the Service Wrapper and at the Message level, the tag will be defined with an <att>id</att> attribute, but the <att>id</att> attribute must not be used when the tag appears at the Service Wrapper level. These identifiers are used on all elements and aggregates below the business message level except:</p>
+               <ulist>
+                  <item>
+                     <p>
+                        <el ref="RqUID">RqUID</el>
+                     </p>
+                  </item>
+                  <item>
+                     <p>
+                        <el ref="SystemId">SystemId</el>
+                     </p>
+                  </item>
+               </ulist>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Identifier</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:ID"/>
+  </xsd:simpleType>
+   <xsd:simpleType name="IDREF">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>Related to the transient identifier is its matching reference. Identifier References in the specification are of the data type "Identifier Reference Type." This is Character data that matches the XML rules for ID attribute data type values and it must match a value in the current data stream. These values are typically shown as @yyyRef where the yyy is replaced with a value that describes the type of object or tag that the item references.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Identifier Reference</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:IDREF"/>
+  </xsd:simpleType>
+   <xsd:simpleType name="IDREFS">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>When an aggregate or element references more than one item in the stream, a "Multiple Identifier Reference Type" data type is defined and is typically shown as @yyyRefs where yyy is replaced with a value that describes the type of object that the item references.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Multiple Identifier Reference</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:IDREFS"/>
+  </xsd:simpleType>
+   <xsd:simpleType name="NC_Type">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>The NC_NoID base class is used to define the NC base class.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Narrow Character - No ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:token">
+         <xsd:minLength value="1"/>
+         <xsd:pattern value="[\p{IsBasicLatin}]*"/>
+      </xsd:restriction>
+  </xsd:simpleType>
+   <xsd:simpleType name="PhoneNumberType_NoID">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>The PhoneNumberType_NoID base class is used to define the PhoneNumberType base class.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Phone Number Type - No ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="NC_Type">
+         <xsd:maxLength value="32"/>
+         <xsd:minLength value="1"/>
+         <xsd:pattern value="\+\S+\-\S+\-\S+(\+\S+)?"/>
+      </xsd:restriction>
+  </xsd:simpleType>
+   <xsd:simpleType name="RAWBINARYDATA">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>The RawBinaryData is used for encoded binary data in an XML document.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Raw Binary Data</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+   <xsd:simpleType name="URLType_NoID">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>The URLType_NoID base class is used to define the URLType base class.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>URL Type - No ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:anyURI">
+         <xsd:maxLength value="1024"/>
+      </xsd:restriction>
+  </xsd:simpleType>
+   <xsd:complexType name="AssignedIdentifier">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>An assigned identifier is created by an organization, carrier, agent, state, or other body. These include policy numbers, social security numbers, passport ids, drivers license numbers, etc.</p>
+               <p>Object identifiers in the specification are of the data type "AssignedIdentifier". This is a Character data type with a maximum length of 36.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Assigned Identifier - With ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="AssignedIdentifier_NoID">
+            <xsd:attribute name="id" type="ID">
+               <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+                  <xsd:documentation>
+                     <Desc>
+                        <p>This attribute is an identifier to a specific element.</p>
+                     </Desc>
+                  </xsd:documentation>
+                  <xsd:appinfo/>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+  </xsd:complexType>
+   <xsd:complexType name="Boolean">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>The <term>Boolean</term> datatype has two states, true or false. True is represented by the literal character 1 (one), while False is represented by the literal character 0 (zero). Unless otherwise specified in this specification, an optional element of type Boolean is implied to be not answered if it is absent.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Boolean - With ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="Boolean_NoID">
+            <xsd:attribute name="id" type="ID">
+               <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+                  <xsd:documentation>
+                     <Desc>
+                        <p>This attribute is an identifier to a specific element.</p>
+                     </Desc>
+                  </xsd:documentation>
+                  <xsd:appinfo/>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+  </xsd:complexType>
+   <xsd:complexType name="C-100">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation/>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 100, With ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="C-100_NoID">
+            <xsd:attribute name="id" type="ID">
+               <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+                  <xsd:documentation>
+                     <Desc>
+                        <p>This attribute is an identifier to a specific element.</p>
+                     </Desc>
+                  </xsd:documentation>
+                  <xsd:appinfo/>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+  </xsd:complexType>
+   <xsd:complexType name="C-11">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation/>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 11, With ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="C-11_NoID">
+            <xsd:attribute name="id" type="ID">
+               <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+                  <xsd:documentation>
+                     <Desc>
+                        <p>This attribute is an identifier to a specific element.</p>
+                     </Desc>
+                  </xsd:documentation>
+                  <xsd:appinfo/>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+  </xsd:complexType>
+   <xsd:complexType name="C-12">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation/>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 12, With ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="C-12_NoID">
+            <xsd:attribute name="id" type="ID">
+               <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+                  <xsd:documentation>
+                     <Desc>
+                        <p>This attribute is an identifier to a specific element.</p>
+                     </Desc>
+                  </xsd:documentation>
+                  <xsd:appinfo/>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+  </xsd:complexType>
+   <xsd:complexType name="C-13">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation/>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 13, With ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="C-13_NoID">
+            <xsd:attribute name="id" type="ID">
+               <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+                  <xsd:documentation>
+                     <Desc>
+                        <p>This attribute is an identifier to a specific element.</p>
+                     </Desc>
+                  </xsd:documentation>
+                  <xsd:appinfo/>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+  </xsd:complexType>
+   <xsd:complexType name="C-15">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation/>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 15, With ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="C-15_NoID">
+            <xsd:attribute name="id" type="ID">
+               <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+                  <xsd:documentation>
+                     <Desc>
+                        <p>This attribute is an identifier to a specific element.</p>
+                     </Desc>
+                  </xsd:documentation>
+                  <xsd:appinfo/>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+  </xsd:complexType>
+   <xsd:complexType name="C-2">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation/>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 2, With ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="C-2_NoID">
+            <xsd:attribute name="id" type="ID">
+               <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+                  <xsd:documentation>
+                     <Desc>
+                        <p>This attribute is an identifier to a specific element.</p>
+                     </Desc>
+                  </xsd:documentation>
+                  <xsd:appinfo/>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+  </xsd:complexType>
+   <xsd:complexType name="C-20">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation/>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 20, With ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="C-20_NoID">
+            <xsd:attribute name="id" type="ID">
+               <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+                  <xsd:documentation>
+                     <Desc>
+                        <p>This attribute is an identifier to a specific element.</p>
+                     </Desc>
+                  </xsd:documentation>
+                  <xsd:appinfo/>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+  </xsd:complexType>
+   <xsd:complexType name="C-2048">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation/>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 2048, With ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="C-2048_NoID">
+            <xsd:attribute name="id" type="ID">
+               <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+                  <xsd:documentation>
+                     <Desc>
+                        <p>This attribute is an identifier to a specific element.</p>
+                     </Desc>
+                  </xsd:documentation>
+                  <xsd:appinfo/>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+  </xsd:complexType>
+   <xsd:complexType name="C-25">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation/>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 25, With ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="C-25_NoID">
+            <xsd:attribute name="id" type="ID">
+               <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+                  <xsd:documentation>
+                     <Desc>
+                        <p>This attribute is an identifier to a specific element.</p>
+                     </Desc>
+                  </xsd:documentation>
+                  <xsd:appinfo/>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+  </xsd:complexType>
+   <xsd:complexType name="C-255">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation/>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 255, With ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="C-255_NoID">
+            <xsd:attribute name="id" type="ID">
+               <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+                  <xsd:documentation>
+                     <Desc>
+                        <p>This attribute is an identifier to a specific element.</p>
+                     </Desc>
+                  </xsd:documentation>
+                  <xsd:appinfo/>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+  </xsd:complexType>
+   <xsd:complexType name="C-30">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation/>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 30, With ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="C-30_NoID">
+            <xsd:attribute name="id" type="ID">
+               <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+                  <xsd:documentation>
+                     <Desc>
+                        <p>This attribute is an identifier to a specific element.</p>
+                     </Desc>
+                  </xsd:documentation>
+                  <xsd:appinfo/>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+  </xsd:complexType>
+   <xsd:complexType name="C-32">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation/>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 32, With ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="C-32_NoID">
+            <xsd:attribute name="id" type="ID">
+               <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+                  <xsd:documentation>
+                     <Desc>
+                        <p>This attribute is an identifier to a specific element.</p>
+                     </Desc>
+                  </xsd:documentation>
+                  <xsd:appinfo/>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+  </xsd:complexType>
+   <xsd:complexType name="C-36">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation/>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 36, With ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="C-36_NoID">
+            <xsd:attribute name="id" type="ID">
+               <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+                  <xsd:documentation>
+                     <Desc>
+                        <p>This attribute is an identifier to a specific element.</p>
+                     </Desc>
+                  </xsd:documentation>
+                  <xsd:appinfo/>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+  </xsd:complexType>
+   <xsd:complexType name="C-4">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation/>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 4, With ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="C-4_NoID">
+            <xsd:attribute name="id" type="ID">
+               <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+                  <xsd:documentation>
+                     <Desc>
+                        <p>This attribute is an identifier to a specific element.</p>
+                     </Desc>
+                  </xsd:documentation>
+                  <xsd:appinfo/>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+  </xsd:complexType>
+   <xsd:complexType name="C-40">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation/>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 40, With ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="C-40_NoID">
+            <xsd:attribute name="id" type="ID">
+               <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+                  <xsd:documentation>
+                     <Desc>
+                        <p>This attribute is an identifier to a specific element.</p>
+                     </Desc>
+                  </xsd:documentation>
+                  <xsd:appinfo/>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+  </xsd:complexType>
+   <xsd:complexType name="C-5">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation/>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 5, With ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="C-5_NoID">
+            <xsd:attribute name="id" type="ID">
+               <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+                  <xsd:documentation>
+                     <Desc>
+                        <p>This attribute is an identifier to a specific element.</p>
+                     </Desc>
+                  </xsd:documentation>
+                  <xsd:appinfo/>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+  </xsd:complexType>
+   <xsd:complexType name="C-50">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation/>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 50, With ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="C-50_NoID">
+            <xsd:attribute name="id" type="ID">
+               <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+                  <xsd:documentation>
+                     <Desc>
+                        <p>This attribute is an identifier to a specific element.</p>
+                     </Desc>
+                  </xsd:documentation>
+                  <xsd:appinfo/>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+  </xsd:complexType>
+   <xsd:complexType name="C-6">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation/>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 6, With ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="C-6_NoID">
+            <xsd:attribute name="id" type="ID">
+               <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+                  <xsd:documentation>
+                     <Desc>
+                        <p>This attribute is an identifier to a specific element.</p>
+                     </Desc>
+                  </xsd:documentation>
+                  <xsd:appinfo/>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+  </xsd:complexType>
+   <xsd:complexType name="C-60">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation/>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 60, With ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="C-60_NoID">
+            <xsd:attribute name="id" type="ID">
+               <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+                  <xsd:documentation>
+                     <Desc>
+                        <p>This attribute is an identifier to a specific element.</p>
+                     </Desc>
+                  </xsd:documentation>
+                  <xsd:appinfo/>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+  </xsd:complexType>
+   <xsd:complexType name="C-64">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation/>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 64, With ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="C-64_NoID">
+            <xsd:attribute name="id" type="ID">
+               <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+                  <xsd:documentation>
+                     <Desc>
+                        <p>This attribute is an identifier to a specific element.</p>
+                     </Desc>
+                  </xsd:documentation>
+                  <xsd:appinfo/>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+  </xsd:complexType>
+   <xsd:complexType name="C-8">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation/>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 8, With ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="C-8_NoID">
+            <xsd:attribute name="id" type="ID">
+               <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+                  <xsd:documentation>
+                     <Desc>
+                        <p>This attribute is an identifier to a specific element.</p>
+                     </Desc>
+                  </xsd:documentation>
+                  <xsd:appinfo/>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+  </xsd:complexType>
+   <xsd:complexType name="C-80">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation/>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length 80, With ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="C-80_NoID">
+            <xsd:attribute name="id" type="ID">
+               <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+                  <xsd:documentation>
+                     <Desc>
+                        <p>This attribute is an identifier to a specific element.</p>
+                     </Desc>
+                  </xsd:documentation>
+                  <xsd:appinfo/>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+  </xsd:complexType>
+   <xsd:complexType name="C-Infinite">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation/>
+         <xsd:appinfo>
+            <TypeTitle>Character String - Length Infinite, With ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="C-Infinite_NoID">
+            <xsd:attribute name="id" type="ID">
+               <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+                  <xsd:documentation>
+                     <Desc>
+                        <p>This attribute is an identifier to a specific element.</p>
+                     </Desc>
+                  </xsd:documentation>
+                  <xsd:appinfo/>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+  </xsd:complexType>
+   <xsd:complexType name="Date">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>Tags specified as type <term>Date</term> accept dates in the <term>YYYY-MM-DD</term> format.</p>
+               <p>This ACORD type uses a Union of several types to create a schema that will validate the flexibility ("fuzzy date") defined in the specification.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Date - With ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="Date_NoID">
+            <xsd:attribute name="id" type="ID">
+               <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+                  <xsd:documentation>
+                     <Desc>
+                        <p>This attribute is an identifier to a specific element.</p>
+                     </Desc>
+                  </xsd:documentation>
+                  <xsd:appinfo/>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+  </xsd:complexType>
+   <xsd:complexType name="DateTime">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>Tags specified as type <term>DateTime</term> accept a fully formatted date/time/time zone string. For example, "1996-10-05T13:22:00.124-05:00" represents October 5, 1996, at 1:22 and 124 milliseconds P.M., in Eastern Standard Time. This is the same as 6:22 P.M.Coordinated Universal Time (UTC).</p>
+               <p>Several portions of a DateTime element are optional. The following table describes the optional components and the meaning if they are absent:</p>
+               <table width="95%" border="1">
+                  <col width="2.5in" valign="top"/>
+                  <col width="2.5in" valign="top"/>
+                  <thead>
+                     <tr>
+                        <th>
+                           <p>Component</p>
+                        </th>
+                        <th>
+                           <p>Meaning if absent</p>
+                        </th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>
+                           <p>±HH:mm (time zone offset)</p>
+                        </td>
+                        <td>
+                           <p>+00:00 (UTC)</p>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <p>THH:mm:ss.ffffff±HH:mm (time component)</p>
+                        </td>
+                        <td>
+                           <p>T00:00:00+00:00 (midnight, UTC)</p>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <p>:ss.ffffff (seconds and fractional seconds)</p>
+                        </td>
+                        <td>
+                           <p>:00.000000 (zero seconds)</p>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <p>.ffffff (fractional seconds)</p>
+                        </td>
+                        <td>
+                           <p>.000000 (zero fractional seconds)</p>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+               <note>
+                  <p>Time zones are specified by an offset, which defines the time zone. Valid offset values are in the range from -12:59 to +12:59, and the <b> sign is required</b>.</p>
+          
+               </note>
+               <p>This ACORD type uses a Union of several types to create a schema that will validate the flexibility defined in the specification.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Date Time - With ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="DateTime_NoID">
+            <xsd:attribute name="id" type="ID">
+               <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+                  <xsd:documentation>
+                     <Desc>
+                        <p>This attribute is an identifier to a specific element.</p>
+                     </Desc>
+                  </xsd:documentation>
+                  <xsd:appinfo/>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+  </xsd:complexType>
+   <xsd:complexType name="Decimal">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>
+                  <term>Decimal</term> indicates a numeric value that meets the following rules:</p>
+               <p>The value is up to fifteen (15) digits in length, excluding any punctuation (e.g., sign, decimal, etc.).</p>
+               <p>The following example which consists of 17 characters would be acceptable as there are no more than 15 digits, +1234567890.12345, while 12345678901234567 is not acceptable because the total count of digits exceeds fifteen.</p>
+               <p>The value is not restricted to integer values and has a decimal point that may be placed anywhere (or omitted) from the left of the leftmost digit to the right of the rightmost digit.</p>
+               <p>The sign is always optional. If it is absent, the value is assumed to be positive.</p>
+               <p>Absence of a decimal point implies one to the right of the rightmost digit (i.e., an integer). Example: 12345 implies 12345. </p>
+               <p>Non-punctuation characters shall be limited to those in the range of hex 30 to hex 39, i.e., '0' through '9'.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Decimal - With ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="Decimal_NoID">
+            <xsd:attribute name="id" type="ID">
+               <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+                  <xsd:documentation>
+                     <Desc>
+                        <p>This attribute is an identifier to a specific element.</p>
+                     </Desc>
+                  </xsd:documentation>
+                  <xsd:appinfo/>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+  </xsd:complexType>
+   <xsd:complexType name="FormalDate">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>The Formal Date type uses the native xsd:date as a base type.  This date type is used where complete, formal dates are required.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Formal Date</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="xsd:date">
+            <xsd:attribute name="id" type="ID">
+               <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+                  <xsd:documentation>
+                     <Desc>
+                        <p>This attribute is an identifier to a specific element.</p>
+                     </Desc>
+                  </xsd:documentation>
+                  <xsd:appinfo/>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+  </xsd:complexType>
+   <xsd:complexType name="IndustryCode_Type">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>An Industry Code is</p>
+               <p>Any tag of type IndustryCode_Type carries with it an optional Identifier Reference attribute (@CodeListRef). Wherever it is appropriate to reference a non-ACORD code list, a reference to the associated <el ref="CodeList">CodeList</el> aggregate can be created. Refer to the &lt;CodeList&gt; aggregate for additional details. </p>
+               <table width="1031px" border="1">
+                  <col valign="top"/>
+                  <col valign="top"/>
+                  <col valign="top"/>
+                  <col valign="top"/>
+                  <thead>
+                     <tr>
+                        <th>
+                           <p>Tag</p>
+                        </th>
+                        <th>
+                           <p>Type</p>
+                        </th>
+                        <th>
+                           <p>Usage</p>
+                        </th>
+                        <th>
+                           <p>Description</p>
+                        </th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>
+                           <p>
+                              <att>CodeListRef</att>
+                           </p>
+                        </td>
+                        <td>
+                           <p>Identifier Reference Type</p>
+                        </td>
+                        <td>
+                           <p>Optional</p>
+                        </td>
+                        <td>
+                           <p>A reference to a document unique identifier used on a <el ref="CodeList">CodeList</el> element to reference or link related codelist information with a particular value used in the XML stream.</p>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Industry Code Type</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="Enumeration_Type">
+            <xsd:attribute name="id" type="ID">
+               <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+                  <xsd:documentation>
+                     <Desc>
+                        <p>This attribute is an identifier to a specific element.</p>
+                     </Desc>
+                  </xsd:documentation>
+                  <xsd:appinfo/>
+               </xsd:annotation>
+            </xsd:attribute>
+            <xsd:attribute name="CodeListRef" type="IDREF">
+               <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+                  <xsd:documentation>
+                     <Desc>
+                        <p>This attribute is an identifier reference to a code list.</p>
+                     </Desc>
+                     <References>
+
+                        <ReferenceItem TagIDRef="CodeList">
+
+                </ReferenceItem>
+
+                     </References>
+                  </xsd:documentation>
+                  <xsd:appinfo/>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+  </xsd:complexType>
+   <xsd:complexType name="Long">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>The <term>Long</term> data type is an Integer expressed as a Base-10, ASCII character set string representation of a 32-bit signed integer in the range -2147483648 to +2147483647. Elements of type Long do not permit a decimal point.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Long - With ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="xsd:int">
+            <xsd:attribute name="id" type="ID">
+               <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+                  <xsd:documentation>
+                     <Desc>
+                        <p>This attribute is an identifier to a specific element.</p>
+                     </Desc>
+                  </xsd:documentation>
+                  <xsd:appinfo/>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+  </xsd:complexType>
+   <xsd:complexType name="PercentDecimal">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>The data type "PercentDecimal" can take any numeric value and may include a decimal point. Elements can have any positive or negative value; there is no range restriction.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Percent Decimal - With ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="xsd:decimal">
+            <xsd:attribute name="id" type="ID">
+               <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+                  <xsd:documentation>
+                     <Desc>
+                        <p>This attribute is an identifier to a specific element.</p>
+                     </Desc>
+                  </xsd:documentation>
+                  <xsd:appinfo/>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+  </xsd:complexType>
+   <xsd:complexType name="PercentLong">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>The data type "PercentLong" can only take integer values. Elements can have any positive or negative value; there is no range restriction.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Percent Long - With ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="xsd:int">
+            <xsd:attribute name="id" type="ID">
+               <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+                  <xsd:documentation>
+                     <Desc>
+                        <p>This attribute is an identifier to a specific element.</p>
+                     </Desc>
+                  </xsd:documentation>
+                  <xsd:appinfo/>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+  </xsd:complexType>
+   <xsd:complexType name="PhoneNumberType">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>
+                  <term>PhoneNumberType</term> indicates a string of up to 32 narrow characters in length (NC-32). It must begin with a plus sign "+" followed by country code, a hyphen, city/area code, another hyphen, then the local phone number. If a PBX extension is to be included, it must appear at the end of the field, separated from the rest of the telephone number by a plus sign.</p>
+               <p>For example, "+1-800-5551212+739" indicates PBX extension 739 at phone number 5551212 within area code 800 of North America (country code 1).</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Phone Number Type - With ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="PhoneNumberType_NoID">
+            <xsd:attribute name="id" type="ID">
+               <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+                  <xsd:documentation>
+                     <Desc>
+                        <p>This attribute is an identifier to a specific element.</p>
+                     </Desc>
+                  </xsd:documentation>
+                  <xsd:appinfo/>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+  </xsd:complexType>
+   <xsd:complexType name="Time">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>Elements of data type <term>Time</term> contain an indication of a particular time during a date. This data type describes a repeating portion of a day. That is, each time described (ignoring leap seconds) occurs once per calendar date. In the specification, it is required that a time data type be able to represent a specific period with indefinite precision. Milliseconds are the minimum required precision of the <term>time</term> data type.</p>
+               <p>Tags specified as type <term>Time</term> accept times in the following format:</p>
+               <code xml:space="preserve">
+          hh:mm:ss.ffffff±HH:mm
+            
+          </code>
+               <p>A time represented using this data type must not be ambiguous with respect to morning and afternoon. That is, the time must occur once and only once each 24-hour period.</p>
+               <p>In addition, the <term>Time</term> data type must not be ambiguous with respect to location at which the time occurs. If unspecified, the time zone defaults to Coordinated Universal Time (UTC). Generally, use of a specific time zone in the representation is preferred. The time zone should always be specified to avoid ambiguous communication between systems.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Time - With ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="xsd:time">
+            <xsd:attribute name="id" type="ID">
+               <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+                  <xsd:documentation>
+                     <Desc>
+                        <p>This attribute is an identifier to a specific element.</p>
+                     </Desc>
+                  </xsd:documentation>
+                  <xsd:appinfo/>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+  </xsd:complexType>
+   <xsd:complexType name="URLType">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>A Uniform Resource Locator (URL) is of the Narrow Character data type with a length of up to 1024 characters (NC-1024). URLs are defined in RFC 1738, which is a subset of the Uniform Resource Identifier (URI) specification (RFC 2396). URLs contain only the printable US-ASCII characters 32 through 126 decimal.</p>
+               <p>An element of the URL data type specifies the URL where a customer may access information. A URL is of the Narrow Character data type with a length of 1024 Characters (NC-1024). The format of a URL begins with a string that identifies which protocol is to be used to access the information, such as "http://".</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>URL Type - With ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="URLType_NoID">
+            <xsd:attribute name="id" type="ID">
+               <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+                  <xsd:documentation>
+                     <Desc>
+                        <p>This attribute is an identifier to a specific element.</p>
+                     </Desc>
+                  </xsd:documentation>
+                  <xsd:appinfo/>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+  </xsd:complexType>
+   <xsd:complexType name="Year">
+      <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+         <xsd:documentation>
+            <Desc>
+               <p>Elements of data type <term>Year</term> contain an indication of a particular year from the Gregorian calendar. Tags specified as type Year accept years in the YYYY format.</p>
+            </Desc>
+         </xsd:documentation>
+         <xsd:appinfo>
+            <TypeTitle>Year - With ID</TypeTitle>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="xsd:gYear">
+            <xsd:attribute name="id" type="ID">
+               <xsd:annotation xmlns="http://www.ACORD.org/standards/Support/xml/v1.0">
+                  <xsd:documentation>
+                     <Desc>
+                        <p>This attribute is an identifier to a specific element.</p>
+                     </Desc>
+                  </xsd:documentation>
+                  <xsd:appinfo/>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:simpleContent>
+  </xsd:complexType>
 </xsd:schema>
