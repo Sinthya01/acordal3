@@ -1,0 +1,178 @@
+<Samples>
+	
+	<Note>Samples of what this might look like. Each shows a different combination of some of the available coverages, limits and deductibles. 
+	This technique would be extended to options and likely other product based aggregates as needed.</Note>
+
+	<Sample>
+		<Note>Available Coverage on a Policy with another selected coverage (no limits, deductibles or options)</Note>
+		<Policy>
+			<Coverage>
+				<CoverageCd>ABCD</CoverageCd>
+			</Coverage>
+			<AvailableCoverage>
+				<CoverageCd>XYZ</CoverageCd>
+			</AvailableCoverage>
+		</Policy>
+	</Sample>
+
+	<Sample>
+		<Note>An available coverage with available limits</Note>
+		<AvailableCoverage>
+			<CoverageCd>ABCD</CoverageCd>
+			<Limit>
+				<FormatCurrencyAmt>10000</FormatCurrencyAmt>
+				<LimitAppliesToCd>ABC</LimitAppliesToCd>
+			</Limit>
+			<Limit>
+				<FormatCurrencyAmt>20000</FormatCurrencyAmt>
+				<LimitAppliesToCd>ABC</LimitAppliesToCd>
+			</Limit>
+			<Limit>
+				<FormatCurrencyAmt>30000</FormatCurrencyAmt>
+				<LimitAppliesToCd>ABC</LimitAppliesToCd>
+			</Limit>
+		</AvailableCoverage>
+	</Sample>
+
+	<Sample>
+		<Note>A coverage with one selected limit and multiple available limits</Note>
+		<Coverage>
+			<CoverageCd>ABCD</CoverageCd>
+			<Limit>
+				<FormatCurrencyAmt>10000</FormatCurrencyAmt>
+				<LimitAppliesToCd>ABC</LimitAppliesToCd>
+			</Limit>
+		</Coverage>
+		<AvailableCoverage>
+			<CoverageCd>ABCD</CoverageCd>
+			<Limit>
+				<FormatCurrencyAmt>10000</FormatCurrencyAmt>
+				<LimitAppliesToCd>ABC</LimitAppliesToCd>
+			</Limit>
+			<Limit>
+				<FormatCurrencyAmt>10000</FormatCurrencyAmt>
+				<LimitAppliesToCd>ABC</LimitAppliesToCd>
+			</Limit>
+			<Limit>
+				<FormatCurrencyAmt>20000</FormatCurrencyAmt>
+				<LimitAppliesToCd>ABC</LimitAppliesToCd>
+			</Limit>
+			<Limit>
+				<FormatCurrencyAmt>30000</FormatCurrencyAmt>
+				<LimitAppliesToCd>ABC</LimitAppliesToCd>
+			</Limit>
+		</AvailableCoverage>
+	</Sample>
+
+	<Sample>
+		<!-- This is a common insurance appetite use-case -->
+		<Note>An available coverage with available limits and deductibles, no interplay</Note>
+		<AvailableCoverage>
+			<CoverageCd>ABCD</CoverageCd>
+			<Limit>
+				<FormatCurrencyAmt>10000</FormatCurrencyAmt>
+				<LimitAppliesToCd>ABC</LimitAppliesToCd>
+			</Limit>
+			<Limit>
+				<FormatCurrencyAmt>20000</FormatCurrencyAmt>
+				<LimitAppliesToCd>ABC</LimitAppliesToCd>
+			</Limit>
+			<Limit>
+				<FormatCurrencyAmt>30000</FormatCurrencyAmt>
+				<LimitAppliesToCd>ABC</LimitAppliesToCd>
+			</Limit>
+			<Deductible>
+				<FormatCurrencyAmt>500</FormatCurrencyAmt>
+				<DeductibleAppliesToCd>ABC</DeductibleAppliesToCd>
+			</Deductible>
+			<Deductible>
+				<FormatCurrencyAmt>1000</FormatCurrencyAmt>
+				<DeductibleAppliesToCd>ABC</DeductibleAppliesToCd>
+			</Deductible>
+		</AvailableCoverage>
+	</Sample>
+
+	<Sample>
+		<!-- From my initial research this scenario is not very common -->
+		<!-- Please note: above example has repeating limits and deductibles in one coverage, below has repeating coverage aggregates -->
+		<Note>An available coverage with available limits and deductibles, interplay between limit and deductibles</Note>
+		<AvailableCoverage>
+			<CoverageCd>ABCD</CoverageCd>
+			<Limit>
+				<FormatCurrencyAmt>10000</FormatCurrencyAmt>
+				<LimitAppliesToCd>ABC</LimitAppliesToCd>
+			</Limit>
+			<Deductible>
+				<FormatCurrencyAmt>500</FormatCurrencyAmt>
+				<DeductibleAppliesToCd>ABC</DeductibleAppliesToCd>
+			</Deductible>
+		</AvailableCoverage>
+		<AvailableCoverage>
+			<CoverageCd>ABCD</CoverageCd>
+			<Limit>
+				<FormatCurrencyAmt>20000</FormatCurrencyAmt>
+				<LimitAppliesToCd>ABC</LimitAppliesToCd>
+			</Limit>
+			<Deductible>
+				<FormatCurrencyAmt>1000</FormatCurrencyAmt>
+				<DeductibleAppliesToCd>ABC</DeductibleAppliesToCd>
+			</Deductible>
+		</AvailableCoverage>
+		<AvailableCoverage>
+			<CoverageCd>ABCD</CoverageCd>
+			<Limit>
+				<FormatCurrencyAmt>30000</FormatCurrencyAmt>
+				<LimitAppliesToCd>ABC</LimitAppliesToCd>
+			</Limit>
+			<Deductible>
+				<FormatCurrencyAmt>1000</FormatCurrencyAmt>
+				<DeductibleAppliesToCd>ABC</DeductibleAppliesToCd>
+			</Deductible>
+			<Deductible>
+				<FormatCurrencyAmt>2000</FormatCurrencyAmt>
+				<DeductibleAppliesToCd>ABC</DeductibleAppliesToCd>
+			</Deductible>
+		</AvailableCoverage>
+	</Sample>
+
+	<Sample>
+		<!-- This is a an alternative implementation using repeating coverage aggregates -->
+		<Note>An available coverage with available limits and deductibles, no interplay</Note>
+		<AvailableCoverage>
+			<CoverageCd>ABCD</CoverageCd>
+			<Limit>
+				<FormatCurrencyAmt>10000</FormatCurrencyAmt>
+				<LimitAppliesToCd>ABC</LimitAppliesToCd>
+			</Limit>
+		</AvailableCoverage>
+		<AvailableCoverage>
+			<CoverageCd>ABCD</CoverageCd>
+			<Limit>
+				<FormatCurrencyAmt>20000</FormatCurrencyAmt>
+				<LimitAppliesToCd>ABC</LimitAppliesToCd>
+			</Limit>
+		</AvailableCoverage>
+		<AvailableCoverage>
+			<CoverageCd>ABCD</CoverageCd>
+			<Limit>
+				<FormatCurrencyAmt>30000</FormatCurrencyAmt>
+				<LimitAppliesToCd>ABC</LimitAppliesToCd>
+			</Limit>
+		</AvailableCoverage>
+		<AvailableCoverage>
+			<CoverageCd>ABCD</CoverageCd>
+			<Deductible>
+				<FormatCurrencyAmt>500</FormatCurrencyAmt>
+				<DeductibleAppliesToCd>ABC</DeductibleAppliesToCd>
+			</Deductible>
+		</AvailableCoverage>
+		<AvailableCoverage>
+			<CoverageCd>ABCD</CoverageCd>
+			<Deductible>
+				<FormatCurrencyAmt>1000</FormatCurrencyAmt>
+				<DeductibleAppliesToCd>ABC</DeductibleAppliesToCd>
+			</Deductible>
+		</AvailableCoverage>
+	</Sample>
+
+</Samples>

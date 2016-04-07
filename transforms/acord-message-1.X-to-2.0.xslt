@@ -6,7 +6,16 @@
 		</xsl:copy>
 	</xsl:template>
 	<xsl:template match="/*">
-		<PolicyActivityRq>
+		<xsl:variable name="message">
+			<xsl:choose>
+				<xsl:when test="contains(local-name(),'Notify')">PolicyNotify</xsl:when>
+				<xsl:when test="contains(local-name(),'NotifyRs')">PolicyNotifyRs</xsl:when>
+				<xsl:when test="contains(local-name(),'Rq')">PolicyRq</xsl:when>
+				<xsl:when test="contains(local-name(),'Rs')">PolicyRs</xsl:when>
+				<xsl:otherwise>PolicyMsg</xsl:otherwise>
+			</xsl:choose>
+		</xsl:variable>
+		<xsl:element name="{$message}">
 			
 			<!-- POLICYRQINFO -->
 			<xsl:apply-templates select="RqUID"/>
@@ -32,10 +41,10 @@
 			<xsl:apply-templates select="ACORDStandardVersionCd"/>
 			
 			<!-- MR-13-1-28162 for below changes : Add FormsRequestedCd and SaveIndicationCd to the quote request. - Add RiskAppetiteCd, FormsRequestedCd, ResponseURL, and SaveIndicationCd to the quote response .. -->
-			<xsl:apply-templates select="PendManualProcessingInd"/>  <!-- TODO : Validate Removal -->
-			<xsl:apply-templates select="AppetiteRequestInd"/>  <!-- TODO : Validate Removal - should be BusinessPurposeTypeCd ? -->
-			<xsl:apply-templates select="FormsRequestedCd"/> <!-- TODO : Validate Removal -->
-			<xsl:apply-templates select="SaveIndicationCd"/> <!-- TODO : Validate Removal -->
+			<xsl:apply-templates select="PendManualProcessingInd"/>  <!-- TODO : Add -->
+			<xsl:apply-templates select="AppetiteRequestInd"/>  <!-- TODO : Add  - should be BusinessPurposeTypeCd ? -->
+			<xsl:apply-templates select="FormsRequestedCd"/> <!-- TODO : Add  -->
+			<xsl:apply-templates select="SaveIndicationCd"/> <!-- TODO : Add  -->
 			
 			<!-- LOB_HEADER -->
 			<xsl:apply-templates select="Producer" />
@@ -44,19 +53,22 @@
 			<xsl:apply-templates select="Location" />
 			<xsl:apply-templates select="ChangeStatus" /> <!-- TODO : Non-Business Aggregate : Move below FOOTER -->
 			<xsl:apply-templates select="ModInfo" /> <!-- TODO : Non-Business Aggregate : Move below FOOTER -->
-			<xsl:apply-templates select="MsgStatus" /> <!-- TODO : Non-Business Aggregate : Add & Move below FOOTER -->
-			<xsl:apply-templates select="ResponseURL" /> <!-- TODO : Non-Business Aggregate : Add & Move below FOOTER -->
+			<xsl:apply-templates select="MsgStatus" /> <!-- TODO : Non-Business Aggregate : Move below FOOTER -->
+			<xsl:apply-templates select="ResponseURL" /> <!-- TODO : Non-Business Aggregate : Move below FOOTER -->
 			<xsl:apply-templates select="CancelNonRenewInfo"/>
 			<xsl:apply-templates select="ReinstateInfo"/>
 			
 			<!-- LOB_BODY -->
 			<xsl:apply-templates select="*[contains(local-name(),'LineBusiness')]"/>
 			
-			<!-- LOB_RQFOOTER -->
 			<xsl:apply-templates select="CommlSubLocation"/> <!-- TODO : Move above LOB -->
+			<xsl:apply-templates select="FarmSubLocation"/> <!-- TODO : Add & Move above LOB -->
+			
+			<!-- LOB_RQ/RSFOOTER -->
 			<xsl:apply-templates select="RemarkText"/>
 			<xsl:apply-templates select="FileAttachmentInfo"/>
-		</PolicyActivityRq>
+			<xsl:apply-templates select="PolicySummaryInfo"/>
+		</xsl:element>
 	</xsl:template>
 	
 	<!-- Collapse Coverage Aggregates -->
