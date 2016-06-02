@@ -6,159 +6,56 @@
 			<xsl:apply-templates select="@*|node()"/>
 		</xsl:copy>
 	</xsl:template>
-	<xsl:template match="@*|node()" mode="Comml">
+	<xsl:template match="@*|node()" mode="CL">
 		<xsl:copy>
-			<xsl:apply-templates select="@*|node()" mode="Comml"/>
+			<xsl:apply-templates select="@*|node()" mode="CL"/>
 		</xsl:copy>
 	</xsl:template>
-	<xsl:template match="@*|node()" mode="Pers">
+	<xsl:template match="@*|node()" mode="PL">
 		<xsl:copy>
-			<xsl:apply-templates select="@*|node()" mode="Pers"/>
+			<xsl:apply-templates select="@*|node()" mode="PL"/>
 		</xsl:copy>
 	</xsl:template>
-	<xsl:template match="@*|node()" mode="FarmRanch">
+	<xsl:template match="@*|node()" mode="FL">
 		<xsl:copy>
-			<xsl:apply-templates select="@*|node()" mode="FarmRanch"/>
+			<xsl:apply-templates select="@*|node()" mode="FL"/>
 		</xsl:copy>
 	</xsl:template>
 	<xsl:template match="/*[not(contains(local-name(),'ACORD'))]|/ACORD/*[contains(local-name(),'InsuranceSvc')]/*[not(contains(local-name(),'RqUID') or contains(local-name(),'SPName'))]">
 		<xsl:variable name="mode">
 			<xsl:choose>
-				<xsl:when test="contains(Policy/LOBCd,'AIRC')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'AIRPFB')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'AVPKG')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'BANDM')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'BOP')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'AUTOB')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'INMRC')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'CPKGE')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'PROP')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'UMBRC')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'CRIM')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'CYBER')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'DO')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'DFIRE')">Pers</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'EPLI')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'EO')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'CFRM')">FarmRanch</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'CGL')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'HANG')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'HOME')">Pers</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'AUTOP')">Pers</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'INMRP')">Pers</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'PPKGE')">Pers</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'UMBRP')">Pers</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'BOAT')">Pers</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'WORK')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'ACCT')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'ACHE')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'AGENT')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'AGLIA')">FarmRanch</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'AGPP')">FarmRanch</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'AGPR')">FarmRanch</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'APKGE')">FarmRanch</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'APROD')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'ARCH')">Comml</xsl:when>
-<!-- 				<xsl:when test="contains(Policy/LOBCd,'AUTO')"></xsl:when> -->
-				<xsl:when test="contains(Policy/LOBCd,'BMISC')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'BOPGL')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'BOPPR')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'CAVN')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'CFIRE')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'COMR')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'CONTR')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'CPMP')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'CRIME')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'DISAB')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'EL')">Comml</xsl:when>
-	<!-- 			<xsl:when test="contains(Policy/LOBCd,'EQ')"></xsl:when> -->
-				<xsl:when test="contains(Policy/LOBCd,'EQLIA')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'EXLIA')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'FIDTY')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'FIDUC')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'FLOOD')"></xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'GARAG')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'HBB')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'HLTH')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'INMAR')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'JUDCL')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'KIDRA')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'LAW')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'LICPT')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'LL')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'LMORT')">FarmRanch</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'LSTIN')">Pers</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'MEDIA')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'MHOME')">Pers</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'MMAL')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'Motorcycle')">Pers</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'MPL')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'MTRCR')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'NWFGR')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'OLIB')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'PHYS')">Comml</xsl:when>
-	<!-- 			<xsl:when test="contains(Policy/LOBCd,'PKG')"></xsl:when> -->
-				<xsl:when test="contains(Policy/LOBCd,'PL')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'PLMSC')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'PUBOF')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'RECV')">Pers</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'RRPRL')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'SCAP')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'SFRNC')">FarmRanch</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'SMP')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'SURE')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'TECH')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'TRUCK')">Comml</xsl:when>
-	<!-- 			<xsl:when test="contains(Policy/LOBCd,'UMBRL')"></xsl:when> -->
-	<!-- 			<xsl:when test="contains(Policy/LOBCd,'UN')"></xsl:when> -->
-				<xsl:when test="contains(Policy/LOBCd,'WCMA')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'WIND')">Pers</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'WORKP')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'WORKV')">Comml</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'YACHT')">Pers</xsl:when>
-				<xsl:otherwise>Unknown</xsl:otherwise>	
+				<xsl:when test="*[contains(local-name(),'FarmLineBusiness')]">FL</xsl:when>
+				<xsl:when test="*[contains(local-name(),'Pers') and contains(local-name(),'LineBusiness')]">PL</xsl:when>
+				<xsl:when test="*[contains(local-name(),'HomeLineBusiness')]">PL</xsl:when>
+				<xsl:when test="*[contains(local-name(),'DwellFireLineBusiness')]">PL</xsl:when>
+				<xsl:when test="*[contains(local-name(),'WatercraftLineBusiness')]">PL</xsl:when>
+				<xsl:otherwise>CL</xsl:otherwise>	
 			</xsl:choose>					
 		</xsl:variable>
 		<xsl:variable name="message">
 			<xsl:choose>
-				<xsl:when test="contains(Policy/LOBCd,'AIRC')">AircraftPolicy</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'AIRPFB')">AirportFBOPolicy</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'AVPKG')">AviationPkgPolicy</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'BANDM')">BoilerMachineryPolicy</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'BOP')">BOPPolicy</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'AUTOB')">CommlAutoPolicy</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'INMRC')">CommlInlandMarinePolicy</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'CPKGE')">CommlPkgPolicy</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'PROP')">CommlPropertyPolicy</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'UMBRC')">CommlUmbrellaPolicy</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'CRIM')">CrimePolicy</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'CYBER')">CyberLiabilityPolicy</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'DO')">DirectorsAndOfficersPolicy</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'DFIRE')">DwellFirePolicy</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'EPLI')">EPLIPolicy</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'EO')">ErrorsAndOmissionsPolicy</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'CFRM')">FarmPolicy</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'CGL')">GeneralLiabilityPolicy</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'HANG')">HangarLiabilityPolicy</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'HOME')">HomePolicy</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'AUTOP')">PersAutoPolicy</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'INMRP')">PersInlandMarinePolicy</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'PPKGE')">PersPkgPolicy</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'UMBRP')">PersUmbrellaPolicy</xsl:when>
-<!-- 				<xsl:when test="contains(Policy/LOBCd,'')">ProductsLiabilityPolicy</xsl:when> -->
-				<xsl:when test="contains(Policy/LOBCd,'BOAT')">WatercraftPolicy</xsl:when>
-				<xsl:when test="contains(Policy/LOBCd,'WORK')">WorkCompPolicy</xsl:when>
-<!-- 				<xsl:when test="contains(Policy/LOBCd,'')">WorkCompProofCoverage</xsl:when> -->
+				<!-- Package -->
+				<xsl:when test="count(*[contains(local-name(),'LineBusiness')]) > 1">
+					<xsl:choose>
+						<xsl:when test="AircraftLineBusiness or AirportFBOLineBusiness">AviationPkg</xsl:when>
+						<xsl:when test="*[contains(local-name(),'PersPkg')]">PersPkg</xsl:when>
+						<xsl:otherwise>CommlPkg</xsl:otherwise>	
+					</xsl:choose>	
+				</xsl:when>
+				<!-- Monoline -->
+				<xsl:when test="count(*[contains(local-name(),'LineBusiness')]) = 1">
+					<xsl:value-of select="substring-before(local-name(*[contains(local-name(),'LineBusiness')][1]),'LineBusiness')" />
+				</xsl:when>
 				<xsl:otherwise>Policy</xsl:otherwise>
 			</xsl:choose>
 			<xsl:choose>
-				<xsl:when test="contains(BusinessPurposeTypeCd,'NBQ')">QuoteInq</xsl:when>
-				<xsl:when test="contains(BusinessPurposeTypeCd,'NBS')">Add</xsl:when>
-				<xsl:when test="contains(BusinessPurposeTypeCd,'PCH')">Mod</xsl:when>
-				<xsl:when test="contains(BusinessPurposeTypeCd,'RIX')">Reissue</xsl:when>
-				<xsl:when test="contains(BusinessPurposeTypeCd,'RWL')">Renew</xsl:when>
-				<xsl:when test="contains(BusinessPurposeTypeCd,'REI')">Reinstate</xsl:when>
-				<xsl:when test="contains(BusinessPurposeTypeCd,'XLN')">Cancel</xsl:when>
+				<xsl:when test="contains(BusinessPurposeTypeCd,'NBQ')">PolicyQuoteInq</xsl:when>
+				<xsl:when test="contains(BusinessPurposeTypeCd,'NBS')">PolicyAdd</xsl:when>
+				<xsl:when test="contains(BusinessPurposeTypeCd,'PCH')">PolicyMod</xsl:when>
+				<xsl:when test="contains(BusinessPurposeTypeCd,'RIX')">PolicyReissue</xsl:when>
+				<xsl:when test="contains(BusinessPurposeTypeCd,'RWL')">PolicyRenew</xsl:when>
+				<xsl:when test="contains(BusinessPurposeTypeCd,'REI')">PolicyReinstate</xsl:when>
+				<xsl:when test="contains(BusinessPurposeTypeCd,'XLN')">PolicyCancel</xsl:when>
 				<xsl:otherwise></xsl:otherwise>
 			</xsl:choose>
 			<xsl:choose>
@@ -169,8 +66,7 @@
 				<xsl:otherwise>Msg</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
-		<xsl:element name="{$message}">
-			
+		<xsl:element name="{$message}">			
 			<!-- POLICYRQINFO -->
 			<xsl:apply-templates select="RqUID"/>
 			<xsl:apply-templates select="ItemIdInfo"/>
@@ -192,136 +88,136 @@
 			<xsl:apply-templates select="CancelNonRenewInfo"/>
 			<xsl:apply-templates select="ReinstateInfo"/>
 			
-			<xsl:if test="$mode='Pers'">
+			<xsl:if test="$mode='PL'">
 				<!-- LOB_HEADER -->
-				<xsl:apply-templates select="Producer" mode="Pers" />
-				<xsl:apply-templates select="InsuredOrPrincipal" mode="Pers" />
-				<xsl:apply-templates select="Policy" mode="Pers"/>
-				<xsl:apply-templates select="Location" mode="Pers" />
-				<xsl:apply-templates select="LocationUWInfo" mode="Pers"/> 
-				<xsl:apply-templates select="FarmSubLocation" mode="Pers"/> 
+				<xsl:apply-templates select="Producer" mode="PL" />
+				<xsl:apply-templates select="InsuredOrPrincipal" mode="PL" />
+				<xsl:apply-templates select="Policy" mode="PL"/>
+				<xsl:apply-templates select="Location" mode="PL" />
+				<xsl:apply-templates select="LocationUWInfo" mode="PL"/> 
+				<xsl:apply-templates select="FarmSubLocation" mode="PL"/> 
 				
 				<!-- LOB_BODY -->
-				<xsl:apply-templates select="*[contains(local-name(),'LineBusiness')]" mode="Pers"/>
+				<xsl:apply-templates select="*[contains(local-name(),'LineBusiness')]" mode="PL"/>
 				
 				<!-- LOB_RQ/RSFOOTER -->
 				<xsl:apply-templates select="RemarkText"/>
 				<xsl:apply-templates select="FileAttachmentInfo"/>
-				<xsl:apply-templates select="PolicySummaryInfo" mode="Pers"/>
+				<xsl:apply-templates select="PolicySummaryInfo" mode="PL"/>
 			</xsl:if>
 			
-			<xsl:if test="$mode='Comml'">
+			<xsl:if test="$mode='CL'">
 				<!-- LOB_HEADER -->
-				<xsl:apply-templates select="Producer" mode="Comml" />
-				<xsl:apply-templates select="InsuredOrPrincipal" mode="Comml" />
-				<xsl:apply-templates select="Policy" mode="Comml"/>
-				<xsl:apply-templates select="Location" mode="Comml" />
-				<xsl:apply-templates select="LocationUWInfo" mode="Comml"/> 
-				<xsl:apply-templates select="FarmSubLocation" mode="Comml"/> 
+				<xsl:apply-templates select="Producer" mode="CL" />
+				<xsl:apply-templates select="InsuredOrPrincipal" mode="CL" />
+				<xsl:apply-templates select="Policy" mode="CL"/>
+				<xsl:apply-templates select="Location" mode="CL" />
+				<xsl:apply-templates select="LocationUWInfo" mode="CL"/> 
+				<xsl:apply-templates select="FarmSubLocation" mode="CL"/> 
 				
 				<!-- LOB_BODY -->
-				<xsl:apply-templates select="*[contains(local-name(),'LineBusiness')]" mode="Comml"/>
+				<xsl:apply-templates select="*[contains(local-name(),'LineBusiness')]" mode="CL"/>
 				
 				<!-- LOB_RQ/RSFOOTER -->
 				<xsl:apply-templates select="RemarkText"/>
 				<xsl:apply-templates select="FileAttachmentInfo"/>
-				<xsl:apply-templates select="PolicySummaryInfo" mode="Comml"/>
+				<xsl:apply-templates select="PolicySummaryInfo" mode="CL"/>
 			
 			</xsl:if>
 			
-			<xsl:if test="$mode='FarmRanch'">
+			<xsl:if test="$mode='FL'">
 			
 				<!-- LOB_HEADER -->
-				<xsl:apply-templates select="Producer" mode="FarmRanch" />
-				<xsl:apply-templates select="InsuredOrPrincipal" mode="FarmRanch" />
-				<xsl:apply-templates select="Policy" mode="FarmRanch"/>
-				<xsl:apply-templates select="Location" mode="FarmRanch" />
-				<xsl:apply-templates select="LocationUWInfo" mode="FarmRanch"/> 
-				<xsl:apply-templates select="FarmSubLocation" mode="FarmRanch"/> 
+				<xsl:apply-templates select="Producer" mode="FL" />
+				<xsl:apply-templates select="InsuredOrPrincipal" mode="FL" />
+				<xsl:apply-templates select="Policy" mode="FL"/>
+				<xsl:apply-templates select="Location" mode="FL" />
+				<xsl:apply-templates select="LocationUWInfo" mode="FL"/> 
+				<xsl:apply-templates select="FarmSubLocation" mode="FL"/> 
 				
 				<!-- LOB_BODY -->
-				<xsl:apply-templates select="*[contains(local-name(),'LineBusiness')]" mode="FarmRanch"/>
+				<xsl:apply-templates select="*[contains(local-name(),'LineBusiness')]" mode="FL"/>
 				
 				<!-- LOB_RQ/RSFOOTER -->
 				<xsl:apply-templates select="RemarkText"/>
 				<xsl:apply-templates select="FileAttachmentInfo"/>
-				<xsl:apply-templates select="PolicySummaryInfo" mode="FarmRanch"/>
+				<xsl:apply-templates select="PolicySummaryInfo" mode="FL"/>
 			</xsl:if>
 			
 		</xsl:element>
 	</xsl:template>
 	
 	<!-- Collapse Coverage Aggregates -->
-	<xsl:template match="Coverage" mode="Pers">
+	<xsl:template match="Coverage" mode="PL">
 		<xsl:element name="Coverage">
-			<xsl:apply-templates select="@*|node()" mode="Pers"/>
+			<xsl:apply-templates select="@*|node()" mode="PL"/>
 		</xsl:element>
 	</xsl:template>
-	<xsl:template match="Coverage" mode="Comml">
+	<xsl:template match="Coverage" mode="CL">
 		<xsl:element name="CommlCoverage">
-			<xsl:apply-templates select="@*|node()" mode="Comml"/>
+			<xsl:apply-templates select="@*|node()" mode="CL"/>
 		</xsl:element>
 	</xsl:template>
-	<xsl:template match="Coverage" mode="FarmRanch">
+	<xsl:template match="Coverage" mode="FL">
 		<xsl:element name="CommlCoverage">
-			<xsl:apply-templates select="@*|node()" mode="FarmRanch"/>
+			<xsl:apply-templates select="@*|node()" mode="FL"/>
 		</xsl:element>
 	</xsl:template>
 	
 	<!-- Collapse Policy Aggregates -->
-	<xsl:template match="Policy" mode="Pers">
+	<xsl:template match="Policy" mode="PL">
 		<xsl:element name="PersPolicy">
-			<xsl:apply-templates select="@*|node()" mode="Pers"/>
+			<xsl:apply-templates select="@*|node()" mode="PL"/>
 		</xsl:element>
 	</xsl:template>
-	<xsl:template match="CommlPolicy" mode="Comml">
+	<xsl:template match="CommlPolicy" mode="CL">
 		<xsl:element name="CommlPolicy">
-			<xsl:apply-templates select="@*|node()" mode="Comml"/>
+			<xsl:apply-templates select="@*|node()" mode="CL"/>
 		</xsl:element>
 	</xsl:template>
-	<xsl:template match="FarmRanchPolicy" mode="FarmRanch">
+	<xsl:template match="FarmRanchPolicy" mode="FL">
 		<xsl:element name="FarmRanchPolicy">
-			<xsl:apply-templates select="@*|node()" mode="FarmRanch"/>
+			<xsl:apply-templates select="@*|node()" mode="FL"/>
 		</xsl:element>
 	</xsl:template>
 	
 	<!-- Collapse Driver Aggregates -->
-	<xsl:template match="Driver" mode="Pers">
+	<xsl:template match="Driver" mode="PL">
 		<xsl:element name="PersDriver">
-			<xsl:apply-templates select="@*|node()" mode="Pers"/>
+			<xsl:apply-templates select="@*|node()" mode="PL"/>
 		</xsl:element>
 	</xsl:template>
-	<xsl:template match="Driver" mode="Comml">
+	<xsl:template match="Driver" mode="CL">
 		<xsl:element name="CommlDriver">
-			<xsl:apply-templates select="@*|node()" mode="Comml"/>
+			<xsl:apply-templates select="@*|node()" mode="CL"/>
 		</xsl:element>
 	</xsl:template>
-	<xsl:template match="Driver" mode="FarmRanch">
+	<xsl:template match="Driver" mode="FL">
 		<xsl:element name="CommlDriver">
-			<xsl:apply-templates select="@*|node()" mode="FarmRanch"/>
+			<xsl:apply-templates select="@*|node()" mode="FL"/>
 		</xsl:element>
 	</xsl:template>
 	
 	<!-- Collapse Vehicle Aggregates -->
-	<xsl:template match="Vehicle" mode="Pers">
+	<xsl:template match="Vehicle" mode="PL">
 		<xsl:element name="PersVeh">
-			<xsl:apply-templates select="@*|node()" mode="Pers"/>
+			<xsl:apply-templates select="@*|node()" mode="PL"/>
 		</xsl:element>
 	</xsl:template>
-	<xsl:template match="Vehicle" mode="Comml">
+	<xsl:template match="Vehicle" mode="CL">
 		<xsl:element name="CommlVeh">
-			<xsl:apply-templates select="@*|node()" mode="Comml"/>
+			<xsl:apply-templates select="@*|node()" mode="CL"/>
 		</xsl:element>
 	</xsl:template>
-	<xsl:template match="Vehicle" mode="FarmRanch">
+	<xsl:template match="Vehicle" mode="FL">
 		<xsl:element name="CommlVeh">
-			<xsl:apply-templates select="@*|node()" mode="FarmRanch"/>
+			<xsl:apply-templates select="@*|node()" mode="FL"/>
 		</xsl:element>
 	</xsl:template>
 	
 	<!-- Collapse PersVehSupplement Aggregate -->
-	<xsl:template match="PersVehSupplement" mode="Pers">
-		<xsl:apply-templates select="@*|node()" mode="Pers"/>
+	<xsl:template match="PersVehSupplement" mode="PL">
+		<xsl:apply-templates select="@*|node()" mode="PL"/>
 	</xsl:template>
 </xsl:stylesheet>
 
