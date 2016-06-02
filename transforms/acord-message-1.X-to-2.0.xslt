@@ -71,36 +71,38 @@
 	
 	<!-- Collapse Coverage Aggregates -->
 	<xsl:template match="PersCoverage|CommlCoverage">
-		<Coverage>
+		<xsl:element name="Coverage">
 			<xsl:apply-templates select="@*|node()"/>
-		</Coverage>
+		</xsl:element>
 	</xsl:template>
 	
 	<!-- Collapse Policy Aggregates -->
 	<xsl:template match="PersPolicy|CommlPolicy|FarmRanchPolicy">
-		<Policy>
+		<xsl:element name="Policy">
 			<xsl:apply-templates select="@*|node()"/>
 			<!-- pull up MiscParty from message -->
 			<xsl:apply-templates select="../MiscParty"/>
-		</Policy>
+		</xsl:element>
 	</xsl:template>
 	
 	<!-- Collapse Driver Aggregates -->
 	<xsl:template match="PersDriver|CommlDriver">
-		<Driver>
+		<xsl:element name="Driver">
 			<xsl:apply-templates select="@*|node()"/>
-		</Driver>
+		</xsl:element>
 	</xsl:template>
 	
 	<!-- Collapse Vehicle Aggregates -->
 	<xsl:template match="PersVeh|CommlVeh">
-		<Vehicle>
+		<xsl:element name="Vehicle">
 			<xsl:choose>
 				<!-- special handling for pers vehicles -->
 				<xsl:when test="contains(local-name(),'PersVeh')">
+				  <xsl:apply-templates select="@*"/>
 				  <xsl:apply-templates select="ItemIdInfo|Manufacturer|ManufacturerCd|Model|ModelCd|ModelYear|VehBodyTypeCd|VehBodyTypeDesc|NumTotalVehRatingPoints|VehTypeCd|VehLength|Registration|Width|AntiTheftDeviceInfo|POLKRestraintDeviceCd|HighTheftInd|TonRatingCapacityCd|CostNewAmt|NumDaysDrivenPerWeek|EstimatedAnnualDistance|FullTermAmt|NetChangeAmt|WrittenAmt|Displacement|Horsepower|LeasedVehInd|LeasedDt|NumCylinders|PurchaseDt|PurchasePriceAmt|TerritoryCd|VehIdentificationNumber|ChassisSerialNumber|EngineSerialNumber|TransmissionSerialNumber|ColorCd|VehSymbolCd|AdditionalInterest|Color|ColorInterior|GrossVehWeight|CombinedVehWeight|InspectionInfo|RateSubClassCd|VehRateGroupInfo|ItemModificationInfo|ExistingUnrepairedDamageInfo|ExistingUnrepairedDamageDesc|DrivenByCoWorkersInd" />
 				  <PersVehSupplement>
-				  	<xsl:apply-templates select="AlteredInd|AntiLockBrakeCd|BumperDiscountInd|CarpoolInd|DamageabilityCd|DaytimeRunningLightInd|EngineTypeCd|GaragingCd|MaximumSpeed|DistanceOneWay|MultiCarDiscountInd|NewVehInd|PurchaseDt|NonOwnedVehInd|NumAxles|LengthTimePerMonth|NumYouthfulOperators|OdometerReading|PhysicalDamageRateClassCd|PricingCd|PrincipalOperatorInd|RateClassCd|ResidualMarketFacilityInd|SeenCarInd|TerritoryCodeCommutingDestinationCd|TractionControlInd|RegisteredVehInd|AlterationsAmt|VehInspectionStatusCd|VehPerformanceCd|VehSalvageTitleNumber|VehUseCd|FourWheelDriveInd|QuestionAnswer|SeatBeltTypeCd|AirBagTypeCd|OdometerReadingAtPurchase|OdometerReadingAsOfDt|PreviouslyLeasedVehInd|BusinessAnnualDistance|AlternateDrivingStateProvCd|AlternateDrivingStateProvUsePct|NumPassengers|ReasonLiabilityRefusedCd|ResidualMarketFacilityTierDt|ResidualMarketFacilityTierCd|TierCd|BIPDSymbolCd|MedPayPIPLiabilitySymbolCd|SalvagedInd|PresentValueAmt|AppraiserActivityInfo"/>
+				    <!-- JSTE - Removed 'PurchaseDt' since its in PCVEH -->
+				  	<xsl:apply-templates select="AlteredInd|AntiLockBrakeCd|BumperDiscountInd|CarpoolInd|DamageabilityCd|DaytimeRunningLightInd|EngineTypeCd|GaragingCd|MaximumSpeed|DistanceOneWay|MultiCarDiscountInd|NewVehInd|NonOwnedVehInd|NumAxles|LengthTimePerMonth|NumYouthfulOperators|OdometerReading|PhysicalDamageRateClassCd|PricingCd|PrincipalOperatorInd|RateClassCd|ResidualMarketFacilityInd|SeenCarInd|TerritoryCodeCommutingDestinationCd|TractionControlInd|RegisteredVehInd|AlterationsAmt|VehInspectionStatusCd|VehPerformanceCd|VehSalvageTitleNumber|VehUseCd|FourWheelDriveInd|QuestionAnswer|SeatBeltTypeCd|AirBagTypeCd|OdometerReadingAtPurchase|OdometerReadingAsOfDt|PreviouslyLeasedVehInd|BusinessAnnualDistance|AlternateDrivingStateProvCd|AlternateDrivingStateProvUsePct|NumPassengers|ReasonLiabilityRefusedCd|ResidualMarketFacilityTierDt|ResidualMarketFacilityTierCd|TierCd|BIPDSymbolCd|MedPayPIPLiabilitySymbolCd|SalvagedInd|PresentValueAmt|AppraiserActivityInfo"/>
 				  </PersVehSupplement>
 				  <xsl:apply-templates select="Coverage|OdometerReadingAtPurchase|OdometerReadingAsOfDt|PreviouslyLeasedVehInd|BusinessAnnualDistance|AlternateDrivingStateProvCd|AlternateDrivingStateProvUsePct|NumPassengers|ReasonLiabilityRefusedCd|ResidualMarketFacilityTierDt|ResidualMarketFacilityTierCd|TierCd|BIPDSymbolCd|MedPayPIPLiabilitySymbolCd|CollisionSymbolCd|ComprehensiveOTCSymbolCd|SalvageInd|PresentValueAmt|AppraiserActivityInfo" />
 				</xsl:when>
@@ -108,7 +110,7 @@
 					<xsl:apply-templates select="@*|node()"/>
 				</xsl:otherwise>
 			</xsl:choose>
-		</Vehicle>
+		</xsl:element>
 	</xsl:template>
 </xsl:stylesheet>
 

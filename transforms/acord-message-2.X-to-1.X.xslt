@@ -253,70 +253,70 @@
 	
 	<!-- Collapse Coverage Aggregates -->
 	<xsl:template match="Coverage" mode="Pers">
-		<PersCoverage>
+		<xsl:element name="Coverage">
 			<xsl:apply-templates select="@*|node()" mode="Pers"/>
-		</PersCoverage>
+		</xsl:element>
 	</xsl:template>
 	<xsl:template match="Coverage" mode="Comml">
-		<CommlCoverage>
+		<xsl:element name="CommlCoverage">
 			<xsl:apply-templates select="@*|node()" mode="Comml"/>
-		</CommlCoverage>
+		</xsl:element>
 	</xsl:template>
 	<xsl:template match="Coverage" mode="FarmRanch">
-		<CommlCoverage>
+		<xsl:element name="CommlCoverage">
 			<xsl:apply-templates select="@*|node()" mode="FarmRanch"/>
-		</CommlCoverage>
+		</xsl:element>
 	</xsl:template>
 	
 	<!-- Collapse Policy Aggregates -->
 	<xsl:template match="Policy" mode="Pers">
-		<PersPolicy>
+		<xsl:element name="PersPolicy">
 			<xsl:apply-templates select="@*|node()" mode="Pers"/>
-		</PersPolicy>
+		</xsl:element>
 	</xsl:template>
 	<xsl:template match="CommlPolicy" mode="Comml">
-		<CommlPolicy>
+		<xsl:element name="CommlPolicy">
 			<xsl:apply-templates select="@*|node()" mode="Comml"/>
-		</CommlPolicy>
+		</xsl:element>
 	</xsl:template>
 	<xsl:template match="FarmRanchPolicy" mode="FarmRanch">
-		<FarmRanchPolicy>
+		<xsl:element name="FarmRanchPolicy">
 			<xsl:apply-templates select="@*|node()" mode="FarmRanch"/>
-		</FarmRanchPolicy>
+		</xsl:element>
 	</xsl:template>
 	
 	<!-- Collapse Driver Aggregates -->
 	<xsl:template match="Driver" mode="Pers">
-		<PersDriver>
+		<xsl:element name="PersDriver">
 			<xsl:apply-templates select="@*|node()" mode="Pers"/>
-		</PersDriver>
+		</xsl:element>
 	</xsl:template>
 	<xsl:template match="Driver" mode="Comml">
-		<CommlDriver>
+		<xsl:element name="CommlDriver">
 			<xsl:apply-templates select="@*|node()" mode="Comml"/>
-		</CommlDriver>
+		</xsl:element>
 	</xsl:template>
 	<xsl:template match="Driver" mode="FarmRanch">
-		<CommlDriver>
+		<xsl:element name="CommlDriver">
 			<xsl:apply-templates select="@*|node()" mode="FarmRanch"/>
-		</CommlDriver>
+		</xsl:element>
 	</xsl:template>
 	
 	<!-- Collapse Vehicle Aggregates -->
 	<xsl:template match="Vehicle" mode="Pers">
-		<PersVeh>
+		<xsl:element name="PersVeh">
 			<xsl:apply-templates select="@*|node()" mode="Pers"/>
-		</PersVeh>
+		</xsl:element>
 	</xsl:template>
 	<xsl:template match="Vehicle" mode="Comml">
-		<CommlVeh>
+		<xsl:element name="CommlVeh">
 			<xsl:apply-templates select="@*|node()" mode="Comml"/>
-		</CommlVeh>
+		</xsl:element>
 	</xsl:template>
 	<xsl:template match="Vehicle" mode="FarmRanch">
-		<CommlVeh>
+		<xsl:element name="CommlVeh">
 			<xsl:apply-templates select="@*|node()" mode="FarmRanch"/>
-		</CommlVeh>
+		</xsl:element>
 	</xsl:template>
 	
 	<!-- Collapse PersVehSupplement Aggregate -->
