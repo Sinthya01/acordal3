@@ -152,7 +152,7 @@
 				<xsl:otherwise>Policy</xsl:otherwise>
 			</xsl:choose>
 			<xsl:choose>
-				<xsl:when test="contains(BusinessPurposeTypeCd,'NBQ')">Quote</xsl:when>
+				<xsl:when test="contains(BusinessPurposeTypeCd,'NBQ')">QuoteInq</xsl:when>
 				<xsl:when test="contains(BusinessPurposeTypeCd,'NBS')">Add</xsl:when>
 				<xsl:when test="contains(BusinessPurposeTypeCd,'PCH')">Mod</xsl:when>
 				<xsl:when test="contains(BusinessPurposeTypeCd,'RIX')">Reissue</xsl:when>
