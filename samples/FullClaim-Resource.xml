@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FullClaim>
+	<ItemIdInfo />
+	<Producer />
+	<InsuredOrPrincipal />
+	<PolicyInfo />
+	<PolicyTypeCd/>
+	<ClaimsOccurrence />
+	<ClaimsParty />
+	<AdjusterParty />
+	<AutoLossInfo />
+	<!-- Other LossInfo's -->
+	<ClaimsPayment />
+	<BusinessPurposeTypeCd/>
+	<RemarkText />
+	<FileAttachmentInfo />
+	<ModInfo />
+</FullClaim>

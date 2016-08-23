@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<List>
+	<Vehicle>
+		<Manufacturer>BMW</Manufacturer>
+		<Model>325</Model>
+		<ModelYear>2005</ModelYear>
+		<VehBodyTypeCd>SEDAN</VehBodyTypeCd>
+		<Registration>
+			<RegistrationId>213123</RegistrationId>
+			<StateProvCd>MA</StateProvCd>
+		</Registration>
+		<CostNewAmt>
+			<Amt>32000</Amt>
+		</CostNewAmt>
+	</Vehicle>
+	<Vehicle>
+		<Manufacturer>FORD</Manufacturer>
+		<Model>F150</Model>
+		<ModelYear>2006</ModelYear>
+		<VehBodyTypeCd>TRUCK</VehBodyTypeCd>
+		<Registration>
+			<RegistrationId>941263</RegistrationId>
+			<StateProvCd>MA</StateProvCd>
+		</Registration>
+		<CostNewAmt>
+			<Amt>62000</Amt>
+		</CostNewAmt>
+	</Vehicle>
+</List>

@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?ACORD version="1.3.1"?>
+<ACORD>
+	<SignonRq>
+		<SignonPswd>
+			<CustId>
+				<SPName>SAMPLE</SPName>
+				<CustLoginId/>
+			</CustId>
+			<CustPswd>
+				<EncryptionTypeCd>NONE</EncryptionTypeCd>
+				<Pswd/>
+			</CustPswd>
+		</SignonPswd>
+		<ClientDt>2009-09-09</ClientDt>
+		<CustLangPref>en-US</CustLangPref>
+		<ClientApp>
+			<Org>Capital</Org>
+			<Name>Evolution</Name>
+			<Version>1.0</Version>
+		</ClientApp>
+	</SignonRq>
+	<InsuranceSvcRq>
+		<RqUID>2AA35544-622C-43C6-88EF-AEC62DFAF632</RqUID>
+		<PolicyRq>
+			<RqUID>c429b65c-7b06-4a06-9490-a354c77a553e</RqUID>
+			<BusinessPurposeTypeCd>NBQ</BusinessPurposeTypeCd>
+			<TransactionRequestDt id="N346"/>
+			<CurCd id="N347">USD</CurCd>
+			<Producer id="N348">
+				<GeneralPartyInfo id="N349">
+					<NameInfo id="N350">
+						<CommlName id="N351">
+							<CommercialName id="N352">Administrative</CommercialName>
+						</CommlName>
+					</NameInfo>
+					<Addr id="N594">
+						<Addr1 id="N595">1 Main St.</Addr1>
+						<City id="N596">Sylvania</City>
+						<StateProvCd id="N597">IL</StateProvCd>
+						<PostalCode id="N598">25145</PostalCode>
+					</Addr>
+					<Communications id="N599">
+						<PhoneInfo id="N601">
+							<PhoneTypeCd id="N600">Phone</PhoneTypeCd>
+							<PhoneNumber id="N602">(781) 656-5656</PhoneNumber>
+						</PhoneInfo>
+						<PhoneInfo id="N604">
+							<PhoneTypeCd id="N603">Fax</PhoneTypeCd>
+							<PhoneNumber id="N605">(565) 629-2652</PhoneNumber>
+						</PhoneInfo>
+						<EmailInfo id="N606">
+							<EmailAddr id="N607">Admid@agency.com</EmailAddr>
+						</EmailInfo>
+					</Communications>
+				</GeneralPartyInfo>
+				<ProducerInfo id="N592">
+					<ContractNumber id="N593">110</ContractNumber>
+					<ProducerSubCode id="N608">222</ProducerSubCode>
+				</ProducerInfo>
+			</Producer>
+			<InsuredOrPrincipal id="N353">
+				<ItemIdInfo id="N354">
+					<AgencyId id="N355">20769</AgencyId>
+				</ItemIdInfo>
+				<GeneralPartyInfo id="N356">
+					<NameInfo id="N357">
+						<PersonName id="N358">
+							<Surname id="N359">Lappen</Surname>
+							<GivenName id="N360">Edward</GivenName>
+							<OtherGivenName id="N361">M</OtherGivenName>
+						</PersonName>
+						<TaxIdentity id="N618">
+							<TaxIdTypeCd id="N619">SSN</TaxIdTypeCd>
+							<TaxId id="N620" encrypt="true">8RPuYbLqp2NUowJX8BHHcg==</TaxId>
+						</TaxIdentity>
+					</NameInfo>
+					<Addr id="N362">
+						<AddrTypeCd id="N363">StreetAddress</AddrTypeCd>
+						<Addr1 id="N364">11 Main St.</Addr1>
+						<City id="N365">Quincy</City>
+						<StateProvCd id="N366">AL</StateProvCd>
+						<PostalCode id="N367">02269</PostalCode>
+					</Addr>
+					<Addr id="N368">
+						<AddrTypeCd id="N369">MailingAddress</AddrTypeCd>
+						<Addr1 id="N370">11 Main St.</Addr1>
+						<City id="N371">Quincy</City>
+						<StateProvCd id="N372">AL</StateProvCd>
+						<PostalCode id="N373">02269</PostalCode>
+					</Addr>
+					<Communications id="N374">
+						<PhoneInfo id="N375">
+							<CommunicationUseCd id="N376">Home</CommunicationUseCd>
+							<PhoneNumber id="N377">(781) 224-5184</PhoneNumber>
+						</PhoneInfo>
+						<PhoneInfo id="N610">
+							<CommunicationUseCd id="N609">Business</CommunicationUseCd>
+							<PhoneNumber id="N611">(269) 265-6563</PhoneNumber>
+						</PhoneInfo>
+						<EmailInfo id="N613">
+							<CommunicationUseCd id="N612">Day</CommunicationUseCd>
+							<EmailAddr id="N614">Prim@App.com</EmailAddr>
+						</EmailInfo>
+						<EmailInfo id="N616">
+							<CommunicationUseCd id="N615">Alternate</CommunicationUseCd>
+							<EmailAddr id="N617">Sec@App.com</EmailAddr>
+						</EmailInfo>
+					</Communications>
+				</GeneralPartyInfo>
+				<InsuredOrPrincipalInfo id="N378">
+					<InsuredOrPrincipalRoleCd id="N379">Insured</InsuredOrPrincipalRoleCd>
+					<PersonInfo id="N380">
+						<BirthDt id="N381">1950-01-15</BirthDt>
+						<MaritalStatusCd id="N621">D</MaritalStatusCd>
+						<OccupationClassCd id="N622">AUD</OccupationClassCd>
+						<LengthTimeEmployed id="N637">
+							<NumUnits id="N638">3</NumUnits>
+						</LengthTimeEmployed>
+						<LengthTimeCurrentOccupation id="N635">
+							<NumUnits id="N636">2</NumUnits>
+						</LengthTimeCurrentOccupation>
+						<LengthTimeWithPreviousEmployer id="N639">
+							<NumUnits id="N640">4</NumUnits>
+						</LengthTimeWithPreviousEmployer>
+						<MiscParty id="N625">
+							<GeneralPartyInfo id="N626">
+								<NameInfo id="N627">
+									<CommlName id="N628">
+										<CommercialName id="N629">Big Insurer</CommercialName>
+									</CommlName>
+								</NameInfo>
+								<Addr id="N630">
+									<Addr1 id="N631">2 Main St</Addr1>
+									<City id="N632">Springfield</City>
+									<StateProvCd id="N633">IL</StateProvCd>
+									<PostalCode id="N634">85655</PostalCode>
+								</Addr>
+							</GeneralPartyInfo>
+							<MiscPartyInfo id="N623">
+								<MiscPartyRoleCd id="N624">Employer</MiscPartyRoleCd>
+							</MiscPartyInfo>
+						</MiscParty>
+					</PersonInfo>
+				</InsuredOrPrincipalInfo>
+			</InsuredOrPrincipal>
+			<Policy id="N382">
+				<CompanyProductCd id="N383">ST</CompanyProductCd>
+				<LOBCd id="N384">AUTOP</LOBCd>
+				<ControllingStateProvCd id="N385">AL</ControllingStateProvCd>
+				<ContractTerm id="N386">
+					<EffectiveDt id="N387">2015-09-01</EffectiveDt>
+					<ExpirationDt id="N388">2016-09-01</ExpirationDt>
+				</ContractTerm>
+				<BillingMethodCd id="N389">AB</BillingMethodCd>
+				<OtherOrPriorPolicy id="N744">
+					<PolicyCd id="N745">Prior</PolicyCd>
+					<PolicyNumber id="N748">POPO97678</PolicyNumber>
+					<LOBCd id="N746"/>
+					<InsurerName id="N747">Nationswide</InsurerName>
+					<ContractTerm id="N749">
+						<ExpirationDt id="N750">2014-08-20</ExpirationDt>
+					</ContractTerm>
+					<LengthTimeWithPreviousInsurer id="N751">
+						<NumUnits id="N752">5</NumUnits>
+					</LengthTimeWithPreviousInsurer>
+				</OtherOrPriorPolicy>
+				<AdditionalInterest id="N753" IdRef="V1">
+					<GeneralPartyInfo id="N756">
+						<NameInfo id="N757">
+							<CommlName id="N758">
+								<CommercialName id="N759">Bob</CommercialName>
+							</CommlName>
+						</NameInfo>
+						<Addr id="N760">
+							<Addr1 id="N761">58 Boadwat Rd</Addr1>
+							<City id="N762">Chicago</City>
+							<StateProvCd id="N763">IL</StateProvCd>
+							<PostalCode id="N764">52545</PostalCode>
+						</Addr>
+					</GeneralPartyInfo>
+					<AdditionalInterestInfo id="N754">
+						<NatureInterestCd id="N755">AINT</NatureInterestCd>
+						<AccountNumberId id="N765">REF85822</AccountNumberId>
+					</AdditionalInterestInfo>
+				</AdditionalInterest>
+				<PersApplicationInfo id="N590">
+					<CurrentResidenceDt id="N591">2015-08-01</CurrentResidenceDt>
+					<Addr id="N644">
+						<AddrTypeCd id="N645">PreviousAddress</AddrTypeCd>
+						<Addr1 id="N647">22 Wenever Rd</Addr1>
+						<City id="N648">Chicago</City>
+						<StateProvCd id="N649">IL</StateProvCd>
+						<PostalCode id="N650">55656</PostalCode>
+					</Addr>
+					<LengthTimePreviousAddr id="N641">
+						<DurationPeriod id="N642">
+							<NumUnits id="N643">6</NumUnits>
+						</DurationPeriod>
+					</LengthTimePreviousAddr>
+				</PersApplicationInfo>
+				<AccidentViolation id="N84" DriverRef="D1">
+					<AccidentViolationDt id="N390">2005-02-26</AccidentViolationDt>
+					<BIInd id="N553">1</BIInd>
+					<AccidentViolationDesc id="N391">RT OF WAY INTERSEC TN</AccidentViolationDesc>
+					<PlaceIncident id="N678">MASS</PlaceIncident>
+					<AccidentViolationRecordTypeCd id="N547">ACCNF</AccidentViolationRecordTypeCd>
+					<LossPayment id="N550">
+						<Coverage id="N548">
+							<CoverageCd id="N549">PD</CoverageCd>
+						</Coverage>
+						<LossPaymentAmt id="N551">
+							<Amt id="N552">1000</Amt>
+						</LossPaymentAmt>
+					</LossPayment>
+				</AccidentViolation>
+				<AccidentViolation id="N87" DriverRef="D1">
+					<AccidentViolationDt id="N392">2005-02-26</AccidentViolationDt>
+					<AccidentViolationDesc id="N393">SPEEDING</AccidentViolationDesc>
+					<AccidentViolationRecordTypeCd id="N554">SPEED</AccidentViolationRecordTypeCd>
+				</AccidentViolation>
+				<AccidentViolation id="N90" DriverRef="D2">
+					<AccidentViolationDt id="N394">2002-06-10</AccidentViolationDt>
+					<AccidentViolationDesc id="N395">SPEEDING</AccidentViolationDesc>
+					<AccidentViolationRecordTypeCd id="N555">DBT</AccidentViolationRecordTypeCd>
+				</AccidentViolation>
+				<DriverVeh DriverRef="D1" VehRef="V1" id="N342">
+					<UsePct id="N396">40</UsePct>
+				</DriverVeh>
+				<DriverVeh DriverRef="D2" VehRef="V1" id="N343">
+					<UsePct id="N397">30</UsePct>
+				</DriverVeh>
+				<DriverVeh DriverRef="D3" VehRef="V1" id="N344">
+					<UsePct id="N398">20</UsePct>
+				</DriverVeh>
+				<DriverVeh DriverRef="D4" VehRef="V1" id="N345">
+					<UsePct id="N399">10</UsePct>
+				</DriverVeh>
+			</Policy>
+			<Location id="L1">
+				<ItemIdInfo id="N492"/>
+				<Addr id="N493">
+					<AddrTypeCd id="N494">GaragingAddress</AddrTypeCd>
+					<Addr1 id="N495">11 Main St.</Addr1>
+					<City id="N496">Quincy</City>
+					<StateProvCd id="N497">AL</StateProvCd>
+					<PostalCode id="N498">02269</PostalCode>
+				</Addr>
+			</Location>
+			<PersAutoLineBusiness id="N101">
+				<LOBCd id="N400">AUTOP</LOBCd>
+				<Coverage id="N515">
+					<CoverageCd id="N516">PD</CoverageCd>
+					<Limit id="N517">
+						<FormatInteger id="N518">25000</FormatInteger>
+					</Limit>
+				</Coverage>
+				<Coverage id="N519">
+					<CoverageCd id="N520">MEDPM</CoverageCd>
+					<Limit id="N521">
+						<FormatInteger id="N522">1000</FormatInteger>
+					</Limit>
+					<Limit id="N768">
+						<FormatInteger id="N769">2000</FormatInteger>
+						<LimitAppliesToCd id="N770">PerPerson</LimitAppliesToCd>
+					</Limit>
+				</Coverage>
+				<Coverage id="N771">
+					<CoverageCd id="N772">UNCSL</CoverageCd>
+					<Limit id="N773">
+						<FormatInteger id="N774">25000</FormatInteger>
+					</Limit>
+				</Coverage>
+				<Coverage AP_ID="UMCSL_UM" id="N775">
+					<CoverageCd id="N776">UMCSL</CoverageCd>
+					<Limit id="N779">
+						<FormatInteger id="N780">20000</FormatInteger>
+					</Limit>
+				</Coverage>
+				<Coverage AP_ID="CSL_BI" id="N777">
+					<CoverageCd id="N778">CSL</CoverageCd>
+					<Limit id="N781">
+						<FormatInteger id="N782">35000</FormatInteger>
+					</Limit>
+				</Coverage>
+				<Coverage id="N783">
+					<CoverageCd id="N784">UNDPD</CoverageCd>
+					<Limit id="N785">
+						<FormatInteger id="N786">10000</FormatInteger>
+					</Limit>
+				</Coverage>
+				<Coverage id="N499">
+					<CoverageCd id="N500">BI</CoverageCd>
+					<Limit id="N502">
+						<FormatInteger id="N503">100000</FormatInteger>
+						<LimitAppliesToCd id="N501">PerPerson</LimitAppliesToCd>
+					</Limit>
+					<Limit id="N505">
+						<FormatInteger id="N506">300000</FormatInteger>
+						<LimitAppliesToCd id="N504">PerAcc</LimitAppliesToCd>
+					</Limit>
+				</Coverage>
+				<Coverage id="N507">
+					<CoverageCd id="N508">UM</CoverageCd>
+					<Limit id="N510">
+						<FormatInteger id="N511">100000</FormatInteger>
+						<LimitAppliesToCd id="N509">PerPerson</LimitAppliesToCd>
+					</Limit>
+					<Limit id="N513">
+						<FormatInteger id="N514">300000</FormatInteger>
+						<LimitAppliesToCd id="N512">PerAcc</LimitAppliesToCd>
+					</Limit>
+				</Coverage>
+				<Driver id="D1">
+					<GeneralPartyInfo id="N401">
+						<NameInfo id="N523">
+							<PersonName id="N524">
+								<Surname id="N526">Lap</Surname>
+								<GivenName id="N525">Eddy</GivenName>
+								<OtherGivenName id="N651">Ron</OtherGivenName>
+							</PersonName>
+							<TaxIdentity id="N655">
+								<TaxIdTypeCd id="N656">SSN</TaxIdTypeCd>
+								<TaxId id="N657">544-54-5454</TaxId>
+							</TaxIdentity>
+						</NameInfo>
+					</GeneralPartyInfo>
+					<DriverInfo id="N402">
+						<PersonInfo id="N403">
+							<GenderCd id="N404">M</GenderCd>
+							<BirthDt id="N405">1950-01-15</BirthDt>
+							<MaritalStatusCd id="N527">V</MaritalStatusCd>
+							<OccupationClassCd id="N654">AUS</OccupationClassCd>
+						</PersonInfo>
+						<License id="N406">
+							<LicenseTypeCd id="N407">Driver</LicenseTypeCd>
+							<LicensedDt id="N652">1990-08-04</LicensedDt>
+							<LicensePermitNumber id="N408">S313212112</LicensePermitNumber>
+							<StateProvCd id="N409">AL</StateProvCd>
+						</License>
+					</DriverInfo>
+					<PersDriverInfo id="N410">
+						<DefensiveDriverDt id="N658">2010-08-05</DefensiveDriverDt>
+						<DistantStudentInd id="N528">0</DistantStudentInd>
+						<DriverRelationshipToApplicantCd id="N653">RE</DriverRelationshipToApplicantCd>
+						<DriverTrainingInd id="N411">0</DriverTrainingInd>
+						<GoodStudentCd id="N529">N</GoodStudentCd>
+					</PersDriverInfo>
+				</Driver>
+				<Driver id="D2">
+					<GeneralPartyInfo id="N412">
+						<NameInfo id="N413">
+							<PersonName id="N414">
+								<Surname id="N415">Kumar</Surname>
+								<GivenName id="N416">Kiran</GivenName>
+							</PersonName>
+							<TaxIdentity id="N662">
+								<TaxIdTypeCd id="N663">SSN</TaxIdTypeCd>
+								<TaxId id="N664">963-25-8125</TaxId>
+							</TaxIdentity>
+						</NameInfo>
+					</GeneralPartyInfo>
+					<DriverInfo id="N417">
+						<PersonInfo id="N418">
+							<GenderCd id="N419">F</GenderCd>
+							<BirthDt id="N420">1955-02-01</BirthDt>
+							<MaritalStatusCd id="N530">D</MaritalStatusCd>
+							<OccupationClassCd id="N661">BAD</OccupationClassCd>
+						</PersonInfo>
+						<License id="N421">
+							<LicenseTypeCd id="N422">Driver</LicenseTypeCd>
+							<LicensedDt id="N659">2000-08-12</LicensedDt>
+							<LicensePermitNumber id="N423">S988735212</LicensePermitNumber>
+							<StateProvCd id="N424">AL</StateProvCd>
+						</License>
+					</DriverInfo>
+					<PersDriverInfo id="N425">
+						<DefensiveDriverDt id="N665">2005-08-12</DefensiveDriverDt>
+						<DistantStudentInd id="N531">0</DistantStudentInd>
+						<DriverRelationshipToApplicantCd id="N660">CH</DriverRelationshipToApplicantCd>
+						<DriverTrainingInd id="N426">0</DriverTrainingInd>
+						<GoodStudentCd id="N532">N</GoodStudentCd>
+					</PersDriverInfo>
+				</Driver>
+				<Driver id="D3">
+					<GeneralPartyInfo id="N427">
+						<NameInfo id="N533">
+							<PersonName id="N534">
+								<Surname id="N536">Maloy</Surname>
+								<GivenName id="N535">Tom</GivenName>
+							</PersonName>
+							<TaxIdentity id="N668">
+								<TaxIdTypeCd id="N669">SSN</TaxIdTypeCd>
+								<TaxId id="N670">544-21-4841</TaxId>
+							</TaxIdentity>
+						</NameInfo>
+					</GeneralPartyInfo>
+					<DriverInfo id="N428">
+						<PersonInfo id="N429">
+							<GenderCd id="N430">M</GenderCd>
+							<BirthDt id="N431">1980-07-02</BirthDt>
+							<MaritalStatusCd id="N537">C</MaritalStatusCd>
+							<OccupationClassCd id="N667">ADJ</OccupationClassCd>
+						</PersonInfo>
+						<License id="N432">
+							<LicenseTypeCd id="N433">Driver</LicenseTypeCd>
+							<LicensedDt id="N434">2001-05-14</LicensedDt>
+							<LicensePermitNumber id="N435">S500211771</LicensePermitNumber>
+							<StateProvCd id="N436">AL</StateProvCd>
+						</License>
+					</DriverInfo>
+					<PersDriverInfo id="N437">
+						<DefensiveDriverDt id="N671">1998-05-25</DefensiveDriverDt>
+						<DistantStudentInd id="N538">0</DistantStudentInd>
+						<DriverRelationshipToApplicantCd id="N666">SO</DriverRelationshipToApplicantCd>
+						<DriverTrainingInd id="N438">1</DriverTrainingInd>
+						<GoodStudentCd id="N539">N</GoodStudentCd>
+					</PersDriverInfo>
+				</Driver>
+				<Driver id="D4">
+					<GeneralPartyInfo id="N439">
+						<NameInfo id="N540">
+							<PersonName id="N541">
+								<Surname id="N543">Smith</Surname>
+								<GivenName id="N542">Brit</GivenName>
+							</PersonName>
+							<TaxIdentity id="N674">
+								<TaxIdTypeCd id="N675">SSN</TaxIdTypeCd>
+								<TaxId id="N676">824-51-6633</TaxId>
+							</TaxIdentity>
+						</NameInfo>
+					</GeneralPartyInfo>
+					<DriverInfo id="N440">
+						<PersonInfo id="N441">
+							<GenderCd id="N442">F</GenderCd>
+							<BirthDt id="N443">1981-07-05</BirthDt>
+							<MaritalStatusCd id="N544">V</MaritalStatusCd>
+							<OccupationClassCd id="N673">BRB</OccupationClassCd>
+						</PersonInfo>
+						<License id="N444">
+							<LicenseTypeCd id="N445">Driver</LicenseTypeCd>
+							<LicensedDt id="N446">2004-05-05</LicensedDt>
+							<LicensePermitNumber id="N447">S211000899</LicensePermitNumber>
+							<StateProvCd id="N448">AL</StateProvCd>
+						</License>
+					</DriverInfo>
+					<PersDriverInfo id="N449">
+						<DefensiveDriverDt id="N677">2013-08-10</DefensiveDriverDt>
+						<DistantStudentInd id="N545">0</DistantStudentInd>
+						<DriverRelationshipToApplicantCd id="N672">OF</DriverRelationshipToApplicantCd>
+						<DriverTrainingInd id="N450">1</DriverTrainingInd>
+						<GoodStudentCd id="N546">N</GoodStudentCd>
+					</PersDriverInfo>
+				</Driver>
+				<Vehicle id="V1" LocationRef="L1" RatedDriverRef="D1">
+					<Manufacturer id="N451">PORSCHE</Manufacturer>
+					<Model id="N452">911 CARR</Model>
+					<ModelYear id="N453">2004</ModelYear>
+					<VehBodyTypeCd id="N454">CONVT</VehBodyTypeCd>
+					<Registration id="N455">
+						<RegistrationId id="N456">PAN77DS37</RegistrationId>
+						<StateProvCd id="N457">AL</StateProvCd>
+					</Registration>
+					<AntiTheftDeviceInfo id="N558">
+						<AntiTheftDeviceCd id="N559">D</AntiTheftDeviceCd>
+					</AntiTheftDeviceInfo>
+					<CostNewAmt id="N458">
+						<Amt id="N459">17000</Amt>
+					</CostNewAmt>
+					<EstimatedAnnualDistance id="N460">
+						<NumUnits id="N461">0</NumUnits>
+					</EstimatedAnnualDistance>
+					<LeasedVehInd id="N462">0</LeasedVehInd>
+					<PurchaseDt id="N463">2004-10-05</PurchaseDt>
+					<TerritoryCd id="N581">US</TerritoryCd>
+					<VehIdentificationNumber id="N464">WP0CA29974S650946</VehIdentificationNumber>
+					<PersVehSupplement>
+						<AntiLockBrakeCd id="N562">4</AntiLockBrakeCd>
+						<CarpoolInd id="N680">0</CarpoolInd>
+						<DaytimeRunningLightInd id="N563">0</DaytimeRunningLightInd>
+						<DistanceOneWay id="N564">
+							<NumUnits id="N565">10</NumUnits>
+						</DistanceOneWay>
+						<NewVehInd id="N465">1</NewVehInd>
+						<OdometerReading id="N466">
+							<NumUnits id="N467">4577</NumUnits>
+						</OdometerReading>
+						<VehUseCd id="N679">BU</VehUseCd>
+						<SeatBeltTypeCd id="N560">Active</SeatBeltTypeCd>
+						<AirBagTypeCd id="N561">Driver</AirBagTypeCd>
+					</PersVehSupplement>
+					<Coverage id="N475">
+						<CoverageCd id="N476">COLL</CoverageCd>
+						<Deductible id="N477">
+							<FormatInteger id="N478">500</FormatInteger>
+							<DeductibleTypeCd id="N479">FL</DeductibleTypeCd>
+						</Deductible>
+					</Coverage>
+					<Coverage id="N480">
+						<CoverageCd id="N481">TL</CoverageCd>
+						<Limit id="N482"/>
+					</Coverage>
+					<Coverage id="N484">
+						<CoverageCd id="N485">TRNEX</CoverageCd>
+						<Limit id="N486">
+							<FormatInteger id="N487">25</FormatInteger>
+							<LimitAppliesToCd id="N488">PerDay</LimitAppliesToCd>
+						</Limit>
+						<Limit id="N489">
+							<FormatInteger id="N490">750</FormatInteger>
+							<LimitAppliesToCd id="N491">Monthly</LimitAppliesToCd>
+						</Limit>
+					</Coverage>
+					<Coverage id="N556">
+						<CoverageCd id="N557">EXNON</CoverageCd>
+						<Option id="N682">
+							<OptionCd id="N683">R</OptionCd>
+							<OptionDescCd id="N681">RegularUse</OptionDescCd>
+						</Option>
+						<Option id="N685">
+							<OptionCd id="N686">G</OptionCd>
+							<OptionDescCd id="N684">GovernmentUse</OptionDescCd>
+						</Option>
+						<Option id="N688">
+							<OptionCd id="N689">S</OptionCd>
+							<OptionDescCd id="N687">CoveredIndividual</OptionDescCd>
+						</Option>
+					</Coverage>
+					<Coverage id="N567">
+						<CoverageCd id="N568">SORPE</CoverageCd>
+						<Limit id="N569">
+							<FormatInteger id="N570">500</FormatInteger>
+						</Limit>
+					</Coverage>
+					<Coverage id="N571">
+						<CoverageCd id="N572">AV</CoverageCd>
+						<Limit id="N573">
+							<FormatInteger id="N574">500</FormatInteger>
+						</Limit>
+					</Coverage>
+					<Coverage id="N575">
+						<CoverageCd id="N576">TR</CoverageCd>
+						<Limit id="N577">
+							<FormatInteger id="N578">250</FormatInteger>
+						</Limit>
+					</Coverage>
+					<Coverage id="N583">
+						<CoverageCd id="N584">COMP</CoverageCd>
+						<Deductible id="N586">
+							<FormatInteger id="N587">500</FormatInteger>
+							<DeductibleTypeCd id="N585">FL</DeductibleTypeCd>
+						</Deductible>
+						<Option id="N589">
+							<OptionCd id="N588">G</OptionCd>
+						</Option>
+					</Coverage>
+				</Vehicle>
+				<QuestionAnswer id="N690">
+					<QuestionCd id="N691">AUTOP97</QuestionCd>
+					<YesNoCd id="N692">NO</YesNoCd>
+				</QuestionAnswer>
+				<QuestionAnswer id="N693">
+					<QuestionCd id="N694">AUPDE01</QuestionCd>
+					<YesNoCd id="N695">YES</YesNoCd>
+				</QuestionAnswer>
+				<QuestionAnswer id="N696">
+					<QuestionCd id="N697">AUTOP04</QuestionCd>
+					<YesNoCd id="N698">YES</YesNoCd>
+					<Explanation id="N737">F</Explanation>
+				</QuestionAnswer>
+				<QuestionAnswer id="N699">
+					<QuestionCd id="N700">AUTOP07</QuestionCd>
+					<YesNoCd id="N701">YES</YesNoCd>
+					<Explanation id="N739">H</Explanation>
+				</QuestionAnswer>
+				<QuestionAnswer id="N702">
+					<QuestionCd id="N703">AUTOP06</QuestionCd>
+					<YesNoCd id="N704">YES</YesNoCd>
+					<Explanation id="N738">G</Explanation>
+				</QuestionAnswer>
+				<QuestionAnswer id="N705">
+					<QuestionCd id="N706">AUTOP11</QuestionCd>
+					<YesNoCd id="N707">YES</YesNoCd>
+					<Explanation id="N732">A</Explanation>
+				</QuestionAnswer>
+				<QuestionAnswer id="N708">
+					<QuestionCd id="N709">GENRL26</QuestionCd>
+					<YesNoCd id="N710">YES</YesNoCd>
+					<Explanation id="N740">I</Explanation>
+				</QuestionAnswer>
+				<QuestionAnswer id="N711">
+					<QuestionCd id="N712">AUTOP08</QuestionCd>
+					<YesNoCd id="N713">YES</YesNoCd>
+					<Explanation id="N741">J</Explanation>
+				</QuestionAnswer>
+				<QuestionAnswer id="N714">
+					<QuestionCd id="N715">AUTOP10</QuestionCd>
+					<YesNoCd id="N716">YES</YesNoCd>
+					<Explanation id="N743">M</Explanation>
+				</QuestionAnswer>
+				<QuestionAnswer id="N717">
+					<QuestionCd id="N718">GENRL22</QuestionCd>
+					<YesNoCd id="N719">YES</YesNoCd>
+					<Explanation id="N736">E</Explanation>
+				</QuestionAnswer>
+				<QuestionAnswer id="N720">
+					<QuestionCd id="N721">AUTOP01</QuestionCd>
+					<YesNoCd id="N722">YES</YesNoCd>
+					<Explanation id="N733">B</Explanation>
+				</QuestionAnswer>
+				<QuestionAnswer id="N723">
+					<QuestionCd id="N724">AUTOP02</QuestionCd>
+					<YesNoCd id="N725">YES</YesNoCd>
+					<Explanation id="N734">C</Explanation>
+				</QuestionAnswer>
+				<QuestionAnswer id="N726">
+					<QuestionCd id="N727">AUTOP03</QuestionCd>
+					<YesNoCd id="N728">YES</YesNoCd>
+					<Explanation id="N735">D</Explanation>
+				</QuestionAnswer>
+				<QuestionAnswer id="N729">
+					<QuestionCd id="N730">AUTOB12</QuestionCd>
+					<YesNoCd id="N731">YES</YesNoCd>
+					<Explanation id="N742">K</Explanation>
+				</QuestionAnswer>
+				<LiabilityCoverageIndicator>SPLIT</LiabilityCoverageIndicator>
+			</PersAutoLineBusiness>
+		</PolicyRq>
+	</InsuranceSvcRq>
+</ACORD>

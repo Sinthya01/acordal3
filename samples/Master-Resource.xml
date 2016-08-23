@@ -2026,7 +2026,7 @@
 			<BirthDt>1967-08-13</BirthDt>
 		</MiscPartyInfo>
 	</Party>
-	<Party LocationRef="" OtherOrPriorPolicyRef="" RegisteredOwnerRef="" RatedDriverRef=""> <!-- Driver -->
+	<Party> <!-- Driver -->
 		<ItemIdInfo>
 			<AgencyId>a</AgencyId>
 			<InsurerId>a</InsurerId>

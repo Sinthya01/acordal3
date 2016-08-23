@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FullPolicy>
+	<ItemIdInfo />
+	<Producer />
+	<InsuredOrPrincipal />
+	<PolicyInfo />
+	<Location />
+	<LocationInfo />
+	<AircraftLineBusiness />
+	<AirportFBOLineBusiness />
+	<BoilerMachineryLineBusiness />
+	<BOPLineBusiness />
+	<CommlAutoLineBusiness />
+	<!-- Other LineBusiness's -->
+	<RemarkText />
+	<FileAttachmentInfo />
+</FullPolicy>

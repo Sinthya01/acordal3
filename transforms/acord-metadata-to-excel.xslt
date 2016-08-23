@@ -144,12 +144,13 @@
   </xsl:template>
 	
   <xsl:template name="usage-table">
-		<Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="{count(Usages/TagUsage//Content)+count(DataTypes/DataType//Content)+1}" x:FullColumns="1" x:FullRows="1" ss:DefaultRowHeight="15">
+		<Table ss:ExpandedColumnCount="8" ss:ExpandedRowCount="{count(Usages/TagUsage//Content)+count(DataTypes/DataType//Content)+count(DataTypes/DataType//ReferenceItem)+1}" x:FullColumns="1" x:FullRows="1" ss:DefaultRowHeight="15">
 				   
 		<!-- header -->	   
 		   <Row>
+			<Cell><Data ss:Type="String">USAGE_TYPE</Data></Cell>
 			<Cell><Data ss:Type="String">USAGE_PARENT</Data></Cell>
-			<Cell><Data ss:Type="String">USAGE_TAG</Data></Cell>
+			<Cell><Data ss:Type="String">USAGE_NAME</Data></Cell>
 			<Cell><Data ss:Type="String">USAGE_DESC</Data></Cell>
 			<Cell><Data ss:Type="String">USAGE_REQUIRED</Data></Cell>
 			<Cell><Data ss:Type="String">USAGE_REPEATING</Data></Cell>
@@ -157,9 +158,10 @@
 			<Cell><Data ss:Type="String">USAGE_OLD</Data></Cell>
 		   </Row>
   
-		<!-- body -->
+		<!-- groups -->
         <xsl:for-each select="Usages/TagUsage//Content">
 		   <Row>
+			<Cell><Data ss:Type="String">Group</Data></Cell>
 			<Cell><Data ss:Type="String"><xsl:value-of select="ancestor::TagUsage/@idref" /></Data></Cell>
 			<Cell><Data ss:Type="String"><xsl:value-of select="@idref" /></Data></Cell>
 			<Cell><Data ss:Type="String"><xsl:value-of select="SupplementalDesc" /></Data></Cell>
@@ -170,9 +172,10 @@
 		   </Row>
         </xsl:for-each>     
   
-		<!-- body -->
+		<!-- data tags -->
         <xsl:for-each select="DataTypes/DataType//Content">
 		   <Row>
+			<Cell><Data ss:Type="String">Tag</Data></Cell>
 			<Cell><Data ss:Type="String"><xsl:value-of select="ancestor::DataType/@id" /></Data></Cell>
 			<Cell><Data ss:Type="String"><xsl:value-of select="@idref" /></Data></Cell>
 			<Cell><Data ss:Type="String"><xsl:value-of select="SupplementalDesc" /></Data></Cell>
@@ -181,27 +184,56 @@
 			<Cell><Data ss:Type="String"><xsl:value-of select="@logicflag" /></Data></Cell>
 			<Cell><Data ss:Type="String"><xsl:value-of select="@deprecated" /></Data></Cell>
 		   </Row>
-        </xsl:for-each>     
-        
-	  </Table>         
-  </xsl:template>
-	
-  <xsl:template name="content-table">
-		<Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="{count(DataTypes/DataType//Content)+1}" x:FullColumns="1" x:FullRows="1" ss:DefaultRowHeight="15">
-				   
-		<!-- header -->	   
+        </xsl:for-each>  
+  
+		<!-- data attributes -->
+        <xsl:for-each select="DataTypes/DataType//ReferenceItem">
 		   <Row>
-			<Cell><Data ss:Type="String">USAGE_PARENT</Data></Cell>
-			<Cell><Data ss:Type="String">USAGE_TAG</Data></Cell>
-			<Cell><Data ss:Type="String">USAGE_DESC</Data></Cell>
-			<Cell><Data ss:Type="String">USAGE_REQUIRED</Data></Cell>
-			<Cell><Data ss:Type="String">USAGE_REPEATING</Data></Cell>
-			<Cell><Data ss:Type="String">USAGE_LOGIC</Data></Cell>
-			<Cell><Data ss:Type="String">USAGE_OLD</Data></Cell>
-		   </Row>    
+			<Cell><Data ss:Type="String">Attribute</Data></Cell>
+			<Cell><Data ss:Type="String"><xsl:value-of select="ancestor::DataType/@id" /></Data></Cell>
+			<Cell><Data ss:Type="String"><xsl:value-of select="ancestor::Attribute/@idref" /></Data></Cell>
+			<Cell><Data ss:Type="String"><xsl:value-of select="ancestor::Attribute/SupplementalDesc" /></Data></Cell>
+			<Cell><Data ss:Type="String"><xsl:value-of select="ancestor::Attribute/@required" /></Data></Cell>
+			<Cell><Data ss:Type="String"><xsl:value-of select="ancestor::Attribute/@repeating" /></Data></Cell>
+			<Cell><Data ss:Type="String"><xsl:value-of select="@TagIDRef" /></Data></Cell>
+			<Cell><Data ss:Type="String"><xsl:value-of select="ancestor::Attribute/@deprecated" /></Data></Cell>
+		   </Row>
+        </xsl:for-each>     
         
 	  </Table>         
   </xsl:template>
   
 </xsl:stylesheet>
 
+<!-- Stylus Studio meta-information - (c) 2004-2009. Progress Software Corporation. All rights reserved.
+
+<metaInformation>
+	<scenarios>
+		<scenario default="yes" name="Scenario1" userelativepaths="yes" externalpreview="no" url="file:///e:/Documents/Dropbox/ACORD/2016-1_Spring_XML_Member_Release Updated/Member/Support Files/XML 2.0 MetaData.xml" htmlbaseurl=""
+		          outputurl="file:///e:/Documents/Dropbox/ACORD/work in progress/FNOL Transaction 2.0 Transaction Spec/ACORD2.xls" processortype="saxon8" useresolver="yes" profilemode="0" profiledepth="" profilelength="" urlprofilexml="" commandline=""
+		          additionalpath="" additionalclasspath="" postprocessortype="none" postprocesscommandline="" postprocessadditionalpath="" postprocessgeneratedext="" validateoutput="no" validator="internal" customvalidator="">
+			<advancedProp name="bSchemaAware" value="true"/>
+			<advancedProp name="xsltVersion" value="2.0"/>
+			<advancedProp name="schemaCache" value="||"/>
+			<advancedProp name="iWhitespace" value="0"/>
+			<advancedProp name="bWarnings" value="true"/>
+			<advancedProp name="bXml11" value="false"/>
+			<advancedProp name="bUseDTD" value="false"/>
+			<advancedProp name="bXsltOneIsOkay" value="true"/>
+			<advancedProp name="bTinyTree" value="true"/>
+			<advancedProp name="bGenerateByteCode" value="true"/>
+			<advancedProp name="bExtensions" value="true"/>
+			<advancedProp name="iValidation" value="0"/>
+			<advancedProp name="iErrorHandling" value="fatal"/>
+			<advancedProp name="sInitialTemplate" value=""/>
+			<advancedProp name="sInitialMode" value=""/>
+		</scenario>
+	</scenarios>
+	<MapperMetaTag>
+		<MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no"/>
+		<MapperBlockPosition></MapperBlockPosition>
+		<TemplateContext></TemplateContext>
+		<MapperFilter side="source"></MapperFilter>
+	</MapperMetaTag>
+</metaInformation>
+-->
