@@ -1,0 +1,40 @@
+{ 
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "Link": {
+      "type": "object",
+      "format": "Link_Type",
+      "description": "Link provides a set of conventions for expressing hyperlinks in either JSON or XML.",
+      "xml": {},
+      "properties": {
+        "rel": {
+          "type": "string",
+          "description": "Relational link - This is described from a code list. All resources generally have a self relational link",
+          "minItems": 1,
+          "uniqueItems": true,
+          "default": "self",
+          "xml": {
+            "attribute": true
+          }
+        },
+        "title": {
+            "type": "string",
+            "description": "Describes the purpose of the link in a short description",
+            "xml": {
+              "attribute": true
+            }
+        },
+        "href": {
+          "type": "string",
+          "description": "In most cases, resources should have a self URI",
+          "xml": {
+            "attribute": true
+          }
+        }
+      },
+       "required": ["rel","href"],
+       "xml": {
+          "attribute": false,
+          "wrapped": false
+       }
+    }
+  }
