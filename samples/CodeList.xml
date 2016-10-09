@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeList>
+	<CodeListName>ClassCode</CodeListName>
+	<CodeListVersion>2.0</CodeListVersion>
+	<CodeListOwnerCd>Custom</CodeListOwnerCd>
+	<Description>This code lists represents the valid Class Codes for the specified State, Effective Date and LOB.</Description>
+	<WebsiteURL>www.custom.com</WebsiteURL>
+    <KeyedValue>
+        <KeyName>1000</KeyName>
+        <KeyValue>Architect</KeyValue>
+        <KeyLabel>1000 : Architect</KeyLabel>
+    </KeyedValue>
+    <KeyedValue>
+        <KeyName>2000</KeyName>
+        <KeyValue>Builder</KeyValue>
+       <KeyLabel>2000 : Builder</KeyLabel>
+    </KeyedValue>
+    <KeyedValue>
+        <KeyName>3000</KeyName>
+        <KeyValue>Manager</KeyValue>
+        <KeyLabel>3000 : Manager</KeyLabel>
+    </KeyedValue>
+</CodeList>
