@@ -6,7 +6,7 @@
    =====  
    ====================================================================== 
    Standard Organization: ACORD
-   Version: 2.0-Draft
+   Version: 2.1-Draft
    Generated on: 05/26/2016
    
    COPYRIGHT NOTICE:
@@ -19,6 +19,6 @@
    http://www.ACORD.org
  
 -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.ACORD.org/standards/PC_Surety/ACORD1/xml/" targetNamespace="http://www.ACORD.org/standards/PC_Surety/ACORD1/xml/" elementFormDefault="qualified" attributeFormDefault="qualified" version="2.1">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.ACORD.org/standards/PC_Surety/ACORD2/xml/" targetNamespace="http://www.ACORD.org/standards/PC_Surety/ACORD2/xml/" elementFormDefault="qualified" attributeFormDefault="qualified" version="2.1">
 	<xsd:include schemaLocation="ServiceWrappers.xsd"/>
 </xsd:schema>
