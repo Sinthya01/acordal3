@@ -1,0 +1,88 @@
+<project 
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+	http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.acord.v2r1</groupId>
+  <artifactId>Acord2</artifactId>
+  <packaging>jar</packaging>
+  <version>2.1.0-SNAPSHOT</version>
+  <name>ACORD XML Standard Version 2 Revision 1</name>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.build.outputDirectory>${project.build.directory}/../build/classes</project.build.outputDirectory>
+  </properties>
+  <build>
+    <sourceDirectory>../src</sourceDirectory>
+  <plugins>
+	<plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>1.5.0</version>
+        <executions>
+          <execution>
+            <id>exec</id>
+	    <phase>process-resources</phase>
+            <goals>
+              <goal>exec</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <executable>xjc</executable>
+          <!-- <workingDirectory>C:\project\trunk\Acord2\3rdparty</workingDirectory> -->
+	      <arguments>
+		      <argument>-d</argument>
+		      <argument>../src</argument>
+		      <argument>-nv</argument>
+		      <argument>-extension</argument>
+		      <argument>-verbose</argument>
+		      <argument>-disableXmlSecurity</argument>
+		      <argument>-p</argument>
+		      <argument>org.acord.v2r1</argument>
+		      <argument>ServiceWrappers.xsd</argument>
+		      <argument>-b</argument>
+		      <argument>jaxb-binding.xjb</argument>
+		      <argument>-episode</argument>
+		      <argument>acord-build-episode.epi</argument>
+		      <argument>-target</argument>
+		      <argument>2.1</argument>
+	      </arguments>
+        </configuration>
+      </plugin>
+    </plugins>
+  <pluginManagement>
+    <plugins>
+    <!--
+	If we e.g. execute on JDK 1.8, we should compile for Java 8 to get
+	the same (or higher) JAXB API version as used during the xjc execution.
+    -->
+      <plugin>
+	<groupId>org.apache.maven.plugins</groupId>
+	<artifactId>maven-compiler-plugin</artifactId>
+	<configuration>
+	    <source>1.8</source>
+	    <target>1.8</target>
+	    <executions>
+	      <execution>
+	        <id>compile</id>
+	        <phase>compile</phase>
+	          <goals>
+	            <goal>compile</goal>
+	          </goals>
+	      </execution>
+	    </executions>
+	</configuration>
+      </plugin>
+    </plugins>
+  </pluginManagement>
+  </build>	  
+  <dependencies>
+    <!--
+        You need the JAXB API to be able to annotate your classes.
+        However, starting with Java 6 that API is included in the
+        Java SE platform so there is no need to declare a dependency.
+    -->
+  </dependencies>
+</project>
