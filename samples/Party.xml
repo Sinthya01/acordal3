@@ -1,0 +1,20 @@
+<Party>
+	<NameInfo>
+		<CommercialName>Test Business</CommercialName>
+		<LegalEntityCd>CP</LegalEntityCd>
+		<TaxIdentity>
+			<TaxIdTypeCd>FEIN</TaxIdTypeCd>
+			<TaxId>12-3433333</TaxId>
+		</TaxIdentity>
+	</NameInfo>
+	<Addr>
+		<AddrTypeCd>MailingAddress</AddrTypeCd>
+		<Addr1>1000 S DEERFIELD AVE</Addr1>
+		<City>DEERFIELD BEACH</City>
+		<StateProvCd>FL</StateProvCd>
+		<PostalCode>33441</PostalCode>
+	</Addr>
+	<Communications>
+		<PhoneNumber>+1-566-2552222</PhoneNumber>
+	</Communications>
+</Party>
